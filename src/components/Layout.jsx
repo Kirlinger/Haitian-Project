@@ -100,8 +100,11 @@ export default function Layout() {
   const navRef = useRef(null);
 
   useEffect(() => {
-    setOpenGroup(null);
-    setMobileOpen(false);
+    const id = setTimeout(() => {
+      setOpenGroup(null);
+      setMobileOpen(false);
+    }, 0);
+    return () => clearTimeout(id);
   }, [location.pathname]);
 
   useEffect(() => {
