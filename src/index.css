@@ -1,5 +1,90 @@
 * { box-sizing: border-box; }
 html, body, #root { margin: 0; padding: 0; min-height: 100%; }
-body { background: #001428; }
-button:hover { transform: translateY(-1px); }
-button:active { transform: translateY(0); }
+body { background: #000d1f; }
+
+/* ── Animations ───────────────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes subtlePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
+}
+
+.tab-enter {
+  animation: fadeInUp 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Card hover lift ──────────────────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease !important;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 100, 255, 0.18) !important;
+  border-color: rgba(0, 160, 255, 0.45) !important;
+}
+
+/* ── Phase / primary buttons ──────────────────────────────────────────────── */
+.phase-btn {
+  transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+}
+.phase-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 24px rgba(0, 80, 200, 0.3) !important;
+}
+.phase-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* ── Stat pills ───────────────────────────────────────────────────────────── */
+.stat-pill {
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+.stat-pill:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 70, 160, 0.55) !important;
+  border-color: rgba(0, 160, 255, 0.45) !important;
+  box-shadow: 0 8px 22px rgba(0, 80, 200, 0.22);
+}
+
+/* ── Nav tab buttons ──────────────────────────────────────────────────────── */
+.nav-tab {
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+.nav-tab:hover {
+  background: rgba(0, 50, 120, 0.25) !important;
+  color: #fff !important;
+}
+
+/* ── Responsive two-column finance grid ──────────────────────────────────── */
+.finance-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+@media (max-width: 700px) {
+  .finance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Custom scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar              { width: 6px; height: 5px; }
+::-webkit-scrollbar-track        { background: rgba(0, 20, 60, 0.4); }
+::-webkit-scrollbar-thumb        { background: rgba(0, 100, 200, 0.45); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover  { background: rgba(0, 140, 255, 0.65); }
+
+/* ── Text selection ───────────────────────────────────────────────────────── */
+::selection { background: rgba(0, 120, 255, 0.32); color: #fff; }
+
+/* ── Global button reset ──────────────────────────────────────────────────── */
+button { transition: all 0.18s ease; }
+button:active { transform: translateY(0) !important; }
