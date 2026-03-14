@@ -4,55 +4,55 @@ import { Card, SectionTitle } from '../components/UI';
 
 const TECH_INNOVATIONS = [
   {
-    icon: '🤖', title: 'Artificial Intelligence in Diagnostics', color: '#8E44AD',
+    icon: '🤖', title: 'Intelligence Artificielle en Diagnostic', color: '#8E44AD',
     features: [
-      { name: 'AI Radiology Reader', desc: 'Machine learning algorithms analyze X-rays, CT scans, and MRIs with 94%+ accuracy — reducing diagnostic time from days to minutes' },
-      { name: 'Predictive Health Analytics', desc: 'Population health data modeled to predict disease outbreaks, resource needs, and at-risk patient identification' },
-      { name: 'Clinical Decision Support', desc: 'AI-assisted treatment recommendations based on 50M+ global patient records, adapted for Haitian disease profiles' },
+      { name: 'Lecture Radiologique par IA', desc: 'Des algorithmes d’apprentissage automatique analysent les radiographies, scanners et IRM avec une précision de 94%+ — réduisant le temps de diagnostic de plusieurs jours à quelques minutes.' },
+      { name: 'Analyses Prédictives de Santé', desc: 'Les données de santé populationnelle sont modélisées pour prédire les épidémies, les besoins en ressources et l’identification des patients à risque.' },
+      { name: 'Aide à la Décision Clinique', desc: 'Recommandations de traitement assistées par IA basées sur 50M+ de dossiers de patients mondiaux, adaptées aux profils pathologiques haïtiens.' },
     ],
   },
   {
-    icon: '📱', title: 'Digital Health & Telemedicine', color: '#0077D4',
+    icon: '📱', title: 'Santé Numérique & Télémédecine', color: '#0077D4',
     features: [
-      { name: 'National Telemedicine Network', desc: '9 provincial satellite clinics connected to HNIH specialists via real-time video consultation — reaching 65% of previously underserved population' },
-      { name: 'Mobile Health App', desc: 'Patient-facing app for appointments, test results, medication reminders, and teleconsultation — works on low-bandwidth connections' },
-      { name: 'National EHR System', desc: 'Every Haitian patient has a single, portable digital health record accessible across all public health facilities nationwide' },
+      { name: 'Réseau National de Télémédecine', desc: '9 cliniques satellites provinciales connectées aux spécialistes du HNIH via consultation vidéo en temps réel — atteignant 65% de la population précédemment non desservie.' },
+      { name: 'Application Mobile Santé', desc: 'Application pour les patients pour les rendez-vous, résultats d’analyses, rappels de médicaments et téléconsultation — fonctionne avec des connexions à faible bande passante.' },
+      { name: 'Système National de DME', desc: 'Chaque patient haïtien dispose d’un dossier médical électronique unique et portable, accessible dans tous les établissements de santé publics du pays.' },
     ],
   },
   {
-    icon: '🔬', title: 'Advanced Medical Equipment', color: '#C0392B',
+    icon: '🔬', title: 'Équipements Médicaux Avancés', color: '#C0392B',
     features: [
-      { name: '3 Tesla MRI & 128-slice CT', desc: 'Imaging equipment comparable to leading European hospitals — Haiti currently has fewer than 3 functional MRI machines nationwide' },
-      { name: 'Da Vinci Robotic Surgery', desc: 'Minimally invasive robotic surgery system enabling complex procedures with shorter recovery times and lower complication rates' },
-      { name: 'Linear Accelerator (LINAC)', desc: "Haiti's first radiation therapy machine for cancer treatment — eliminating the need to travel abroad for cancer care" },
+      { name: 'IRM 3 Tesla & Scanner CT 128 coupes', desc: 'Équipements d’imagerie comparables aux meilleurs hôpitaux européens — Haïti ne dispose actuellement que de moins de 3 IRM fonctionnels dans tout le pays.' },
+      { name: 'Chirurgie Robotique Da Vinci', desc: 'Système de chirurgie robotique mini-invasive permettant des interventions complexes avec des temps de récupération plus courts et des taux de complications plus faibles.' },
+      { name: 'Accélérateur Linéaire (LINAC)', desc: 'Première machine de radiothérapie d’Haïti pour le traitement du cancer — éliminant le besoin de voyager à l’étranger pour les soins oncologiques.' },
     ],
   },
   {
-    icon: '🧬', title: 'Genetics & Precision Medicine', color: '#27AE60',
+    icon: '🧬', title: 'Génétique & Médecine de Précision', color: '#27AE60',
     features: [
-      { name: "Haiti's First Genetics Lab", desc: 'Diagnostic genetic testing for rare diseases, hereditary conditions, and personalized treatment planning' },
-      { name: 'Pharmacogenomics', desc: 'DNA-based medication selection to maximize treatment effectiveness and minimize adverse drug reactions' },
-      { name: 'Newborn Genetic Screening', desc: 'Nationwide program to identify treatable genetic conditions in newborns before symptoms appear' },
+      { name: 'Premier Laboratoire de Génétique d’Haïti', desc: 'Tests génétiques diagnostiques pour les maladies rares, les conditions héréditaires et la planification de traitements personnalisés.' },
+      { name: 'Pharmacogénomique', desc: 'Sélection de médicaments basée sur l’ADN pour maximiser l’efficacité thérapeutique et minimiser les effets indésirables.' },
+      { name: 'Dépistage Génétique Néonatal', desc: 'Programme national pour identifier les maladies génétiques traitables chez les nouveau-nés avant l’apparition des symptômes.' },
     ],
   },
 ];
 
 const EDUCATION_PROGRAMS = [
-  { icon: '🩺', title: 'Medical Residency (12 Specialties)', duration: '3–6 years', spots: '60/year', desc: 'Full residency training in all HNIH specialties — the first complete residency program ever offered in Haiti.' },
-  { icon: '👩‍⚕️', title: 'Nursing Excellence Program', duration: '2 years', spots: '200/year', desc: 'Advanced nursing training with specialty tracks in ICU, oncology, pediatrics, and emergency care.' },
-  { icon: '🔬', title: 'Allied Health Sciences', duration: '1–2 years', spots: '150/year', desc: 'Training for lab technicians, radiographers, physiotherapists, and medical social workers.' },
-  { icon: '📡', title: 'Health IT & Informatics', duration: '1 year', spots: '50/year', desc: 'Specialized training in health data management, telemedicine systems, and AI health tools.' },
-  { icon: '🎓', title: 'Continuing Medical Education', duration: 'Ongoing', spots: 'Unlimited', desc: 'Regular workshops, webinars, and certifications to keep all Haiti health workers current with global advances.' },
-  { icon: '💊', title: 'Pharmaceutical Sciences', duration: '1–2 years', spots: '40/year', desc: 'Train pharmacists and pharmaceutical researchers to support local drug production and supply chain management.' },
+  { icon: '🩺', title: 'Résidence Médicale (12 Spécialités)', duration: '3–6 ans', spots: '60/an', desc: 'Formation complète de résidence dans toutes les spécialités du HNIH — premier programme de résidence complet jamais proposé en Haïti.' },
+  { icon: '👩‍⚕️', title: 'Programme d’Excellence Infirmière', duration: '2 ans', spots: '200/an', desc: 'Formation infirmière avancée avec parcours spécialisés en soins intensifs, oncologie, pédiatrie et urgences.' },
+  { icon: '🔬', title: 'Sciences de la Santé Connexes', duration: '1–2 ans', spots: '150/an', desc: 'Formation pour techniciens de laboratoire, manipulateurs radio, kinésithérapeutes et assistants sociaux médicaux.' },
+  { icon: '📡', title: 'Informatique de Santé & Télémédecine', duration: '1 an', spots: '50/an', desc: 'Formation spécialisée en gestion des données de santé, systèmes de télémédecine et outils de santé par IA.' },
+  { icon: '🎓', title: 'Formation Médicale Continue', duration: 'En continu', spots: 'Illimité', desc: 'Ateliers réguliers, webinaires et certifications pour maintenir tous les agents de santé haïtiens à jour avec les avancées mondiales.' },
+  { icon: '💊', title: 'Sciences Pharmaceutiques', duration: '1–2 ans', spots: '40/an', desc: 'Former des pharmaciens et des chercheurs pharmaceutiques pour soutenir la production locale de médicaments et la gestion de la chaîne d’approvisionnement.' },
 ];
 
 const SUSTAINABILITY_PILLARS = [
-  { icon: '☀️', title: '2 MW Solar Power', desc: '100% renewable energy generation on-site — eliminating dependence on Haiti\'s unreliable power grid and reducing operating costs by 35%.', color: '#F39C12' },
-  { icon: '💧', title: 'Water Independence', desc: 'On-site water purification and rainwater harvesting system providing 100% of hospital water needs without municipal dependence.', color: '#00A3E0' },
-  { icon: '♻️', title: 'Medical Waste Management', desc: 'State-of-the-art medical waste treatment and disposal system, preventing environmental contamination and meeting international biosafety standards.', color: '#27AE60' },
-  { icon: '💊', title: 'Local Pharmaceutical Production', desc: '100+ essential generic medications produced locally by Year 5, reducing import costs by 40% and ensuring continuous supply.', color: '#8E44AD' },
-  { icon: '🌍', title: 'Medical Tourism Revenue', desc: 'Caribbean medical tourism program targeting $50M/year in revenue by Year 7, providing cross-subsidy for free care for the poorest.', color: '#E74C3C' },
-  { icon: '📈', title: 'Financial Self-Sufficiency', desc: 'Revenue model designed to achieve break-even by Year 8 and generate profit by Year 10, ensuring perpetual operation without donor dependence.', color: C.success },
+  { icon: '☀️', title: '2 MW d’Énergie Solaire', desc: 'Production d’énergie 100% renouvelable sur site — éliminant la dépendance au réseau électrique peu fiable d’Haïti et réduisant les coûts d’exploitation de 35%.', color: '#F39C12' },
+  { icon: '💧', title: 'Autonomie en Eau', desc: 'Système de purification d’eau sur site et collecte des eaux de pluie fournissant 100% des besoins en eau de l’hôpital sans dépendance municipale.', color: '#00A3E0' },
+  { icon: '♻️', title: 'Gestion des Déchets Médicaux', desc: 'Système de traitement et d’élimination des déchets médicaux de pointe, prévenant la contamination environnementale et respectant les normes internationales de biosécurité.', color: '#27AE60' },
+  { icon: '💊', title: 'Production Pharmaceutique Locale', desc: '100+ médicaments génériques essentiels produits localement à la 5ème année, réduisant les coûts d’importation de 40% et assurant un approvisionnement continu.', color: '#8E44AD' },
+  { icon: '🌍', title: 'Recettes du Tourisme Médical', desc: 'Programme de tourisme médical caribéen ciblant 50M$/an de recettes d’ici l’Année 7, fournissant une subvention croisée pour les soins gratuits aux plus démunis.', color: '#E74C3C' },
+  { icon: '📈', title: 'Autosuffisance Financière', desc: 'Modèle de recettes conçu pour atteindre l’équilibre à l’Année 8 et générer des bénéfices à l’Année 10, assurant une exploitation perpétuelle sans dépendance aux donateurs.', color: C.success },
 ];
 
 export default function Solutions() {
@@ -77,30 +77,30 @@ export default function Solutions() {
             marginBottom: 24, fontSize: 12,
             color: C.success, fontWeight: 700, letterSpacing: 1,
           }}>
-            💡 SOLUTIONS & INNOVATIONS
+            💡 SOLUTIONS & INNOVATIONS · SOLISYON & INOVASYON
           </div>
 
           <h1 style={{ fontSize: 'clamp(28px,4vw,52px)', fontWeight: 900, margin: '0 0 20px', letterSpacing: -1 }}>
-            <span style={{ color: '#fff' }}>Solving Haiti's</span>
+            <span style={{ color: '#fff' }}>Résoudre la Crise</span>
             <br />
             <span style={{ background: `linear-gradient(90deg, ${C.success}, ${C.accent})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Health Crisis
+              Sanitaire d’Haïti
             </span>
           </h1>
 
           <p style={{ color: '#C8D8E8', fontSize: 17, lineHeight: 1.8, maxWidth: 720, margin: '0 0 40px' }}>
-            HNIH doesn't just treat the symptoms of Haiti's healthcare crisis — it addresses
-            the root causes with a comprehensive, multi-layered approach combining world-class
-            infrastructure, advanced technology, education, and sustainable financing.
+            Le HNIH ne traite pas seulement les symptômes de la crise sanitaire haïtienne — il s’attaque
+            aux causes profondes avec une approche globale et multi-niveaux combinant des infrastructures
+            de classe mondiale, des technologies avancées, l’éducation et un financement durable.
           </p>
 
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             {[
-              { v: '6', l: 'Core Solutions' },
-              { v: '12', l: 'Specialties' },
-              { v: '500/yr', l: 'Trained Staff' },
-              { v: '9', l: 'Satellite Clinics' },
-              { v: '2 MW', l: 'Solar Power' },
+              { v: '6', l: 'Solutions Clés' },
+              { v: '12', l: 'Spécialités' },
+              { v: '500/an', l: 'Personnel Formé' },
+              { v: '9', l: 'Cliniques Satellites' },
+              { v: '2 MW', l: 'Énergie Solaire' },
             ].map((s) => (
               <div key={s.l} className="stat-pill" style={{
                 background: 'rgba(0,200,100,0.1)',
@@ -118,13 +118,13 @@ export default function Solutions() {
       {/* 6 Core Solutions */}
       <section style={{ maxWidth: 1280, margin: '0 auto', padding: '60px 24px' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Comprehensive Response</div>
+          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Réponse Globale</div>
           <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: '0 0 16px' }}>
-            Six Pillars of the HNIH Solution
+            Les Six Piliers de la Solution HNIH
           </h2>
           <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
-            Each pillar directly addresses one of Haiti's six critical healthcare failures,
-            creating a comprehensive solution that is greater than the sum of its parts.
+            Chaque pilier répond directement à l’une des six défaillances critiques du système
+            de santé haïtien, créant une solution globale qui est plus grande que la somme de ses parties.
           </p>
         </div>
 
@@ -144,7 +144,7 @@ export default function Solutions() {
                   fontSize: 28, flexShrink: 0,
                 }}>{sol.icon}</div>
                 <div>
-                  <div style={{ color: C.soft, fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase' }}>Pillar {i + 1}</div>
+                  <div style={{ color: C.soft, fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase' }}>Pilier {i + 1}</div>
                   <div style={{ color: '#fff', fontWeight: 800, fontSize: 16 }}>{sol.title}</div>
                 </div>
               </div>
@@ -168,13 +168,14 @@ export default function Solutions() {
       }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Medical Technology</div>
+            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Technologie Médicale</div>
             <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: '0 0 16px' }}>
-              World-Class Technology Bringing Haiti Up to Speed
+              Technologies de Classe Mondiale pour Moderniser Haïti
             </h2>
             <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
-              HNIH will deploy cutting-edge medical technology that today exists nowhere else in Haiti,
-              leapfrogging decades of missing infrastructure in a single project.
+              Le HNIH déploiera des technologies médicales de pointe qui n’existent nulle part ailleurs
+              en Haïti aujourd’hui, faisant un bond de plusieurs décennies d’infrastructure manquante
+              en un seul projet.
             </p>
           </div>
 
@@ -207,14 +208,14 @@ export default function Solutions() {
       {/* Education Programs */}
       <section style={{ maxWidth: 1280, margin: '0 auto', padding: '60px 24px' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Education & Training</div>
+          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Éducation & Formation</div>
           <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: '0 0 16px' }}>
-            Building Haiti's Medical Workforce
+            Former la Main-d'Œuvre Médicale d’Haïti
           </h2>
           <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
-            Stopping the brain drain requires more than better salaries — it requires building
-            excellent training programs so Haitian doctors and nurses can reach their full
-            potential without leaving the country.
+            Stopper la fuite des cerveaux nécessite plus que de meilleurs salaires — il faut construire
+            d’excellents programmes de formation pour que les médecins et infirmières haïtiens puissent
+            atteindre leur plein potentiel sans quitter le pays.
           </p>
         </div>
 
@@ -225,7 +226,7 @@ export default function Solutions() {
               <div style={{ color: '#fff', fontWeight: 700, fontSize: 15, marginBottom: 6 }}>{prog.title}</div>
               <div style={{ display: 'flex', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
                 <span style={{ background: 'rgba(0,80,200,0.2)', border: `1px solid ${C.border}`, borderRadius: 20, padding: '2px 10px', fontSize: 11, color: C.accent, fontWeight: 600 }}>{prog.duration}</span>
-                <span style={{ background: 'rgba(0,200,100,0.1)', border: '1px solid rgba(0,200,100,0.25)', borderRadius: 20, padding: '2px 10px', fontSize: 11, color: C.success, fontWeight: 600 }}>{prog.spots} spots</span>
+                <span style={{ background: 'rgba(0,200,100,0.1)', border: '1px solid rgba(0,200,100,0.25)', borderRadius: 20, padding: '2px 10px', fontSize: 11, color: C.success, fontWeight: 600 }}>{prog.spots} places</span>
               </div>
               <p style={{ color: C.soft, fontSize: 13, lineHeight: 1.6, margin: 0 }}>{prog.desc}</p>
             </Card>
@@ -242,14 +243,14 @@ export default function Solutions() {
       }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ color: C.success, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Sustainability</div>
+            <div style={{ color: C.success, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Durabilité</div>
             <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: '0 0 16px' }}>
-              Built to Last. Built to Scale.
+              Bâti pour Durer. Bâti pour Croître.
             </h2>
             <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 680, margin: '0 auto' }}>
-              HNIH is designed for permanent, self-sustaining operation — not as a perpetual
-              charity project but as a world-class institution that generates revenue to fund
-              its own expansion and free care for the poorest.
+              Le HNIH est conçu pour un fonctionnement permanent et autosuffisant — non pas comme un
+              projet caritatif perpétuel, mais comme une institution de classe mondiale qui génère des
+              recettes pour financer sa propre expansion et les soins gratuits aux plus démunis.
             </p>
           </div>
 
@@ -279,11 +280,11 @@ export default function Solutions() {
         }}>
           <div style={{ fontSize: 40, marginBottom: 16 }}>📊</div>
           <h2 style={{ fontSize: 'clamp(22px,3vw,36px)', fontWeight: 900, margin: '0 0 16px' }}>
-            See the Numbers Behind the Vision
+            Découvrir les Chiffres derrière la Vision
           </h2>
           <p style={{ color: C.soft, fontSize: 16, lineHeight: 1.7, maxWidth: 600, margin: '0 auto 28px' }}>
-            Explore the detailed budget breakdown, implementation timeline, and projected
-            impact on Haiti's population.
+            Explorez le budget détaillé, le calendrier de mise en œuvre et l’impact projeté
+            sur la population haïtienne.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/budget" style={{ textDecoration: 'none' }}>
@@ -293,7 +294,7 @@ export default function Solutions() {
                 padding: '14px 32px', borderRadius: 10,
                 fontSize: 15, fontWeight: 700, cursor: 'pointer',
               }}>
-                💰 Budget & Funding
+                💰 Budget & Financement
               </button>
             </Link>
             <Link to="/impact" style={{ textDecoration: 'none' }}>
@@ -304,7 +305,7 @@ export default function Solutions() {
                 padding: '14px 32px', borderRadius: 10,
                 fontSize: 15, fontWeight: 700, cursor: 'pointer',
               }}>
-                📈 Impact & Results
+                📈 Impact & Résultats
               </button>
             </Link>
           </div>

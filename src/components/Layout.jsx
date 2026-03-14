@@ -4,45 +4,45 @@ import { C } from '../data/constants';
 
 // ── Main 8-page navigation ──────────────────────────────────────────────────
 const NAV_PRIMARY = [
-  { label: "About the Project", path: "/about", icon: "🏥" },
-  { label: "Health Crisis", path: "/health-crisis", icon: "🚨" },
+  { label: "À Propos du Projet", path: "/about", icon: "🏥" },
+  { label: "Crise Sanitaire", path: "/health-crisis", icon: "🚨" },
   { label: "Solutions", path: "/solutions", icon: "💡" },
-  { label: "Budget & Funding", path: "/budget", icon: "💰" },
-  { label: "Impact & Results", path: "/impact", icon: "📈" },
-  { label: "Implementation", path: "/plan", icon: "🗓️" },
+  { label: "Budget & Financement", path: "/budget", icon: "💰" },
+  { label: "Impact & Résultats", path: "/impact", icon: "📈" },
+  { label: "Plan de Mise en Œuvre", path: "/plan", icon: "🗓️" },
 ];
 
 // ── Detailed sub-navigation groups ──────────────────────────────────────────
 const NAV_GROUPS = [
   {
-    label: "Deep Dive",
+    label: "Détails",
     icon: "📋",
     items: [
-      { label: "Vision & Mission",        path: "/vizyon" },
-      { label: "12 Departments",          path: "/depatman" },
-      { label: "ROI & Projections",       path: "/roi" },
-      { label: "History & Context",       path: "/istwa" },
-      { label: "Technology Details",      path: "/teknoloji" },
+      { label: "Vizyon & Misyon",           path: "/vizyon" },
+      { label: "12 Depatman",               path: "/depatman" },
+      { label: "ROI & Projeksyon",          path: "/roi" },
+      { label: "Istwa & Kontèks",           path: "/istwa" },
+      { label: "Teknoloji",                 path: "/teknoloji" },
     ],
   },
   {
-    label: "Programs",
+    label: "Pwogram",
     icon: "🎓",
     items: [
-      { label: "Medical Training",         path: "/formasyon" },
-      { label: "Research & Science",       path: "/rechech" },
-      { label: "Community Health",         path: "/kominote" },
-      { label: "Diaspora Bond",            path: "/dyaspora" },
-      { label: "Partnerships",             path: "/patenayi" },
+      { label: "Fòmasyon Medikal",          path: "/formasyon" },
+      { label: "Rechèch & Syans",           path: "/rechech" },
+      { label: "Sante Kominotè",            path: "/kominote" },
+      { label: "Obligasyon Dyaspora",       path: "/dyaspora" },
+      { label: "Patenayi",                  path: "/patenayi" },
     ],
   },
   {
     label: "Info",
     icon: "ℹ️",
     items: [
-      { label: "Leadership Team",          path: "/ekip" },
-      { label: "Transparency",             path: "/transparans" },
-      { label: "News & Updates",           path: "/aktyalite" },
+      { label: "Ekip Direksyon",            path: "/ekip" },
+      { label: "Transparans",              path: "/transparans" },
+      { label: "Aktyalite",                path: "/aktyalite" },
     ],
   },
 ];
@@ -145,7 +145,7 @@ export default function Layout() {
             }}>🏥</div>
             <div>
               <div style={{ color: "#fff", fontSize: 13, fontWeight: 800, lineHeight: 1.2, letterSpacing: 0.3 }}>HNIH</div>
-              <div style={{ color: C.soft, fontSize: 9, letterSpacing: 0.8 }}>HAITI HEALTH PROJECT</div>
+              <div style={{ color: C.soft, fontSize: 9, letterSpacing: 0.8 }}>PROJET SANTE NASYONAL</div>
             </div>
           </Link>
 
@@ -220,7 +220,7 @@ export default function Layout() {
               cursor: "pointer",
               whiteSpace: "nowrap",
             }}>
-              💬 Contact / Support
+              💬 Kontakte / Sipò
             </button>
           </Link>
 
@@ -266,7 +266,7 @@ export default function Layout() {
               borderBottom: `1px solid ${C.border}`,
               marginBottom: 8,
             }}>
-              🏠 Home
+              🏠 Paj Akèy
             </Link>
             {/* Primary nav in mobile */}
             {NAV_PRIMARY.map((item) => (
@@ -347,7 +347,7 @@ export default function Layout() {
                   fontWeight: 700,
                   cursor: "pointer",
                 }}>
-                  💬 Contact / Support
+                  💬 Kontakte / Sipò
                 </button>
               </Link>
             </div>
@@ -389,8 +389,7 @@ export default function Layout() {
                 </div>
               </div>
               <p style={{ color: C.soft, fontSize: 13, lineHeight: 1.6, margin: "0 0 12px" }}>
-                Haiti's national health project. 1,200 beds, 12 specialties, $850M investment.
-                Opening 2031.
+                Projet national de santé d'Haïti. 1 200 lits, 12 spécialités, investissement de 850M$. Ouverture 2031.
               </p>
               <div style={{ display: "flex", gap: 8 }}>
                 {["𝕏", "in", "f", "📧"].map((s, i) => (
@@ -405,16 +404,16 @@ export default function Layout() {
               </div>
             </div>
 
-            {/* The Project */}
+            {/* Le Projet */}
             <div>
-              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>The Project</div>
+              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Le Projet</div>
               {[
-                { l: "About HNIH", p: "/about" },
-                { l: "Health Crisis in Haiti", p: "/health-crisis" },
+                { l: "À Propos du HNIH", p: "/about" },
+                { l: "Crise Sanitaire en Haïti", p: "/health-crisis" },
                 { l: "Solutions & Innovations", p: "/solutions" },
-                { l: "Budget & Funding", p: "/budget" },
-                { l: "Impact & Results", p: "/impact" },
-                { l: "Implementation Plan", p: "/plan" },
+                { l: "Budget & Financement", p: "/budget" },
+                { l: "Impact & Résultats", p: "/impact" },
+                { l: "Plan de Mise en Œuvre", p: "/plan" },
               ].map((lnk) => (
                 <Link key={lnk.p} to={lnk.p} style={{ display: "block", color: C.soft, textDecoration: "none", fontSize: 13, marginBottom: 8 }}
                   onMouseEnter={e => e.currentTarget.style.color = "#fff"}
@@ -424,16 +423,16 @@ export default function Layout() {
               ))}
             </div>
 
-            {/* Programs */}
+            {/* Pwogram */}
             <div>
-              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Programs & Details</div>
+              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Pwogram & Detay</div>
               {[
-                { l: "12 Departments", p: "/depatman" },
-                { l: "Technology", p: "/teknoloji" },
-                { l: "Medical Training", p: "/formasyon" },
-                { l: "Community Health", p: "/kominote" },
-                { l: "Diaspora Bond", p: "/dyaspora" },
-                { l: "Partnerships", p: "/patenayi" },
+                { l: "12 Depatman", p: "/depatman" },
+                { l: "Teknoloji", p: "/teknoloji" },
+                { l: "Fòmasyon Medikal", p: "/formasyon" },
+                { l: "Sante Kominotè", p: "/kominote" },
+                { l: "Obligasyon Dyaspora", p: "/dyaspora" },
+                { l: "Patenayi", p: "/patenayi" },
               ].map((lnk) => (
                 <Link key={lnk.p} to={lnk.p} style={{ display: "block", color: C.soft, textDecoration: "none", fontSize: 13, marginBottom: 8 }}
                   onMouseEnter={e => e.currentTarget.style.color = "#fff"}
@@ -443,11 +442,11 @@ export default function Layout() {
               ))}
             </div>
 
-            {/* Contact */}
+            {/* Kontakte */}
             <div>
-              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Contact Us</div>
+              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Kontakte Nou</div>
               {[
-                { icon: "📍", text: "Delmas 33, Port-au-Prince, Haiti" },
+                { icon: "📍", text: "Delmas 33, Port-au-Prince, Ayiti" },
                 { icon: "📞", text: "+509 2940-0000" },
                 { icon: "📧", text: "info@hnih.ht" },
                 { icon: "🌐", text: "www.hnih.ht" },
@@ -465,7 +464,7 @@ export default function Layout() {
                   padding: "8px 18px", borderRadius: 8,
                   fontSize: 12, fontWeight: 700, cursor: "pointer",
                 }}>
-                  💬 Get In Touch
+                  💬 Kontakte Nou
                 </button>
               </Link>
             </div>
@@ -482,13 +481,13 @@ export default function Layout() {
             gap: 8,
           }}>
             <div style={{ color: "#4A6A90", fontSize: 12 }}>
-              © 2025 Hôpital National Intégré d'Haïti (HNIH). All rights reserved.
+              © 2025 Hôpital National Intégré d'Haïti (HNIH). Tout dwa rezève.
             </div>
             <div style={{ display: "flex", gap: 16 }}>
               {[
-                { l: "Transparency", p: "/transparans" },
-                { l: "News", p: "/aktyalite" },
-                { l: "Contact", p: "/contact" },
+                { l: "Transparans", p: "/transparans" },
+                { l: "Aktyalite", p: "/aktyalite" },
+                { l: "Kontakte", p: "/contact" },
               ].map((lnk) => (
                 <Link key={lnk.p} to={lnk.p} style={{ color: "#4A6A90", textDecoration: "none", fontSize: 12 }}>{lnk.l}</Link>
               ))}

@@ -26,21 +26,21 @@ export default function About() {
             marginBottom: 24, fontSize: 12,
             color: C.light, fontWeight: 700, letterSpacing: 1,
           }}>
-            🏥 ABOUT THE PROJECT · AKÈ PWOJÈ A
+            🏥 À PROPOS DU PROJET · AKÈ PWOJÈ A
           </div>
 
           <h1 style={{ fontSize: 'clamp(28px,4vw,52px)', fontWeight: 900, margin: '0 0 20px', letterSpacing: -1 }}>
             <span style={{ color: '#fff' }}>Hôpital National</span>
             <br />
             <span style={{ background: `linear-gradient(90deg, ${C.accent}, ${C.light})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Intégré d'Haïti (HNIH)
+              Intégré d’Haïti (HNIH)
             </span>
           </h1>
 
           <p style={{ color: '#C8D8E8', fontSize: 17, lineHeight: 1.8, maxWidth: 720, margin: '0 0 40px' }}>
-            A transformational national development project to build Haiti's first world-class,
-            fully integrated medical center — a 1,200-bed hospital campus with 12 specialties,
-            a medical school, research center, and telemedicine network covering the entire country.
+            Un projet de développement national transformationnel pour construire le premier centre médical
+            national intégré de classe mondiale en Haïti — un campus hospitalier de 1 200 lits avec 12 spécialités,
+            une école de médecine, un centre de recherche et un réseau de télémédecine couvrant tout le pays.
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
@@ -62,24 +62,24 @@ export default function About() {
       {/* Mission & Vision */}
       <section style={{ maxWidth: 1280, margin: '0 auto', padding: '60px 24px' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Our Purpose</div>
-          <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: 0 }}>Mission, Vision & Values</h2>
+          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Notre Mission</div>
+          <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: 0 }}>Mission, Vision & Valeurs</h2>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px,1fr))', gap: 20, marginBottom: 48 }}>
           <Card style={{ background: 'linear-gradient(135deg,rgba(0,50,130,0.52),rgba(0,30,80,0.38))', borderColor: 'rgba(0,160,255,0.32)', padding: 28 }}>
             <div style={{ fontSize: 36, marginBottom: 14 }}>🎯</div>
-            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Our Mission</div>
+            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Notre Mission</div>
             <p style={{ color: '#D4E8FF', fontSize: 15, lineHeight: 1.8, margin: 0 }}>{VISION.mission}</p>
           </Card>
           <Card style={{ background: 'linear-gradient(135deg,rgba(0,80,180,0.42),rgba(0,50,120,0.28))', borderColor: 'rgba(0,190,255,0.28)', padding: 28 }}>
             <div style={{ fontSize: 36, marginBottom: 14 }}>🚀</div>
-            <div style={{ color: C.light, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Our Vision for 2035</div>
+            <div style={{ color: C.light, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Notre Vision pour 2035</div>
             <p style={{ color: '#D4E8FF', fontSize: 15, lineHeight: 1.8, margin: 0 }}>{VISION.vision}</p>
           </Card>
         </div>
 
-        <SectionTitle sub="The six core principles guiding every decision at HNIH">Our Core Values</SectionTitle>
+        <SectionTitle sub="Les six principes fondamentaux qui guident chaque décision au HNIH">Nos Valeurs Fondamentales</SectionTitle>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px,1fr))', gap: 16, marginBottom: 48 }}>
           {VISION.values.map((v) => (
             <Card key={v.title} className="card-hover" style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
@@ -102,9 +102,9 @@ export default function About() {
       }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Why Now</div>
+            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Pourquoi Maintenant</div>
             <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: 0 }}>
-              Why Haiti Needs HNIH
+              Pourquoi Haïti a Besoin du HNIH
             </h2>
           </div>
 
@@ -133,13 +133,13 @@ export default function About() {
       {/* Departments Overview */}
       <section style={{ maxWidth: 1280, margin: '0 auto', padding: '60px 24px' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Medical Services</div>
+          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Sèvis Medikal</div>
           <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: '0 0 16px' }}>
-            12 Specialized Departments
+            12 Depatman Spesyalize
           </h2>
           <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 640, margin: '0 auto' }}>
-            HNIH provides comprehensive medical coverage across all major specialties —
-            all of which are either absent or critically underfunded in Haiti today.
+            Le HNIH offre une couverture médicale complète dans toutes les grandes spécialités —
+            dont la plupart sont absentes ou gravement sous-financées en Haïti aujourd’hui.
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export default function About() {
                 <span style={{ fontSize: 32 }}>{dept.icon}</span>
                 <div>
                   <div style={{ color: '#fff', fontWeight: 700, fontSize: 15 }}>{dept.name}</div>
-                  {dept.beds > 0 && <div style={{ color: C.soft, fontSize: 12 }}>{dept.beds} beds · {dept.specialists} specialists</div>}
+                  {dept.beds > 0 && <div style={{ color: C.soft, fontSize: 12 }}>{dept.beds} lits · {dept.specialists} spécialistes</div>}
                 </div>
               </div>
               <p style={{ color: C.soft, fontSize: 13, lineHeight: 1.6, margin: '0 0 14px' }}>{dept.desc}</p>
@@ -181,7 +181,7 @@ export default function About() {
               color: '#fff', padding: '12px 28px',
               borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: 'pointer',
             }}>
-              View All 12 Departments →
+              Wè Tout 12 Depatman →
             </button>
           </Link>
         </div>
@@ -196,13 +196,13 @@ export default function About() {
       }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Global Support</div>
+            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12 }}>Soutien Mondial</div>
             <h2 style={{ fontSize: 'clamp(22px,3vw,38px)', fontWeight: 900, margin: '0 0 16px' }}>
-              International Partners & Institutions
+              Partenaires & Institutions Internationaux
             </h2>
             <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 640, margin: '0 auto' }}>
-              HNIH has secured commitments from leading global health organizations, development
-              banks, universities, and NGOs.
+              Le HNIH a obtenu des engagements des principales organisations mondiales de santé,
+              des banques de développement, des universités et des ONG.
             </p>
           </div>
 
@@ -243,11 +243,11 @@ export default function About() {
             }}>
               <div style={{ fontSize: 36, marginBottom: 14 }}>🚨</div>
               <div style={{ color: '#FF6B6B', fontWeight: 800, fontSize: 18, marginBottom: 10 }}>
-                Health Crisis in Haiti
+                Crise Sanitaire en Haïti
               </div>
               <p style={{ color: C.soft, fontSize: 14, lineHeight: 1.6, margin: 0 }}>
-                Understand the depth of Haiti's healthcare emergency with comprehensive
-                statistics and analysis.
+                Comprenez l’ampleur de l’urgence sanitaire haïtienne grâce à des statistiques
+                et analyses complètes.
               </p>
             </div>
           </Link>
@@ -262,8 +262,8 @@ export default function About() {
                 Solutions & Innovations
               </div>
               <p style={{ color: C.soft, fontSize: 14, lineHeight: 1.6, margin: 0 }}>
-                Explore how HNIH addresses each challenge with modern technology and
-                innovative healthcare approaches.
+                Découvrez comment le HNIH répond à chaque défi avec des technologies modernes
+                et des approches sanitaires innovantes.
               </p>
             </div>
           </Link>
@@ -275,11 +275,11 @@ export default function About() {
             }}>
               <div style={{ fontSize: 36, marginBottom: 14 }}>💰</div>
               <div style={{ color: C.success, fontWeight: 800, fontSize: 18, marginBottom: 10 }}>
-                Budget & Funding
+                Budget & Financement
               </div>
               <p style={{ color: C.soft, fontSize: 14, lineHeight: 1.6, margin: 0 }}>
-                Review the $850M financing plan, investment structure, and long-term
-                financial sustainability model.
+                Examinez le plan de financement de 850M$, la structure d’investissement et le
+                modèle de viabilité financière à long terme.
               </p>
             </div>
           </Link>
