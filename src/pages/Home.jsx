@@ -1,31 +1,34 @@
 import { Link } from 'react-router-dom';
 import heroImg from '../assets/hero.png';
-import { C, VISION } from '../data/constants';
+import { C, VISION, CRISIS_STATS, TIMELINE_PHASES } from '../data/constants';
 import { Card, Badge } from '../components/UI';
 
 const QUICK_LINKS = [
-  { icon: "🌟", title: "Vizyon & Misyon", desc: "Misyon, vizyon ak valè fondamantal", path: "/vizyon", color: C.blue },
-  { icon: "💼", title: "Finansman $850M", desc: "6 sous finansman ak plan detaye", path: "/finansman", color: "#003087" },
-  { icon: "🗓️", title: "4 Faz Konstriksyon", desc: "Pwogram 5 ane konplè", path: "/faz", color: C.steel },
-  { icon: "🏥", title: "12 Depatman", desc: "Espesyalite medikal modèn", path: "/depatman", color: "#8E44AD" },
-  { icon: "📈", title: "ROI & Enpak", desc: "Retou sou envestisman & chif kle", path: "/roi", color: C.success },
-  { icon: "📡", title: "Teknoloji", desc: "IRM, IA, Telemedsèn & plis", path: "/teknoloji", color: "#00A3E0" },
-  { icon: "🎓", title: "Fòmasyon", desc: "Pwogram rezidans & bous etid", path: "/formasyon", color: "#E67E22" },
-  { icon: "🌍", title: "Kominote", desc: "9 klinik satelit, sèvis gratis", path: "/kominote", color: "#27AE60" },
-  { icon: "💰", title: "Dyaspora Bond", desc: "Envesti 5.5% sou 10 ane", path: "/dyaspora", color: "#F39C12" },
-  { icon: "🤝", title: "Patenayi", desc: "OMS, BM, Harvard & plis", path: "/patenayi", color: "#C0392B" },
-  { icon: "📰", title: "Aktyalite", desc: "Nouvèl & anonsman resan", path: "/aktyalite", color: "#1ABC9C" },
-  { icon: "📞", title: "Kontakte Nou", desc: "Adrès, telefòn, fòm kontak", path: "/kontakte", color: "#9B59B6" },
+  { icon: "🏥", title: "About the Project", desc: "Mission, vision, and overview of HNIH", path: "/about", color: C.blue },
+  { icon: "🚨", title: "Health Crisis in Haiti", desc: "Statistics, context, and root causes", path: "/health-crisis", color: "#E74C3C" },
+  { icon: "💡", title: "Solutions & Innovations", desc: "How HNIH addresses the crisis", path: "/solutions", color: "#27AE60" },
+  { icon: "💼", title: "Budget & Funding $850M", desc: "6 financing sources, detailed plan", path: "/budget", color: "#003087" },
+  { icon: "📈", title: "Impact & Results", desc: "ROI, projections & population impact", path: "/impact", color: C.success },
+  { icon: "🗓️", title: "Implementation Plan", desc: "4-phase, 5-year construction program", path: "/plan", color: C.steel },
+  { icon: "🏗️", title: "12 Departments", desc: "All medical specialties in detail", path: "/depatman", color: "#8E44AD" },
+  { icon: "📡", title: "Technology", desc: "MRI, AI, Telemedicine & more", path: "/teknoloji", color: "#00A3E0" },
+  { icon: "🎓", title: "Medical Training", desc: "Residency programs & scholarships", path: "/formasyon", color: "#E67E22" },
+  { icon: "🌍", title: "Community Health", desc: "9 satellite clinics, free care", path: "/kominote", color: "#27AE60" },
+  { icon: "💰", title: "Diaspora Bond", desc: "Invest at 5.5% over 10 years", path: "/dyaspora", color: "#F39C12" },
+  { icon: "📞", title: "Contact / Support", desc: "Address, phone, contact form", path: "/contact", color: "#9B59B6" },
 ];
 
 const MILESTONES = [
-  { year: "2025", label: "Kòmansman Pwojè", desc: "Plas tè chwazi, finansman kòmanse, ekip fondatè an plas", done: true },
-  { year: "2026", label: "Travay Konstriksyon", desc: "Fondas, enfrastrikti, premye bilding Ijans & ICU", done: true },
-  { year: "2027", label: "Ouvèti Faz 1", desc: "Ijans, ICU, 4 sal operasyon, laboratwa debaz ouvri", done: false },
-  { year: "2028", label: "Espesyalite Klinik", desc: "Matènite, Kardyoloji, Nèwoloji, Pedyatri aktif", done: false },
-  { year: "2029", label: "Teknoloji Avanse", desc: "IRM 3T, Sant Kansè, Robotik, Telemedsèn nasyonal", done: false },
-  { year: "2031", label: "Gran Ouvèti Konplè", desc: "Seremoni nasyonal, 1200 kabann, akreditasyon JCI", done: false },
+  { year: "2025", label: "Project Foundation", desc: "Site selected, financing secured, founding team in place", done: true },
+  { year: "2026", label: "Construction Begins", desc: "Foundation, infrastructure, first Emergency & ICU building", done: true },
+  { year: "2027", label: "Phase 1 Opening", desc: "Emergency, ICU, 4 operating theaters, basic laboratory open", done: false },
+  { year: "2028", label: "Clinical Specialties", desc: "Maternity, Cardiology, Neurology, Pediatrics activated", done: false },
+  { year: "2029", label: "Advanced Technology", desc: "3T MRI, Cancer Center, Robotics, National Telemedicine", done: false },
+  { year: "2031", label: "Grand Opening", desc: "National ceremony, 1,200 beds, JCI international accreditation", done: false },
 ];
+
+// Abbreviated crisis stats for the home page preview
+const CRISIS_PREVIEW = CRISIS_STATS.slice(0, 4);
 
 export default function Home() {
   return (
@@ -56,7 +59,7 @@ export default function Home() {
           padding: "80px 24px",
           width: "100%",
         }}>
-          <div style={{ maxWidth: 760 }}>
+          <div style={{ maxWidth: 780 }}>
             <div style={{
               display: "inline-flex", alignItems: "center", gap: 8,
               background: "rgba(0,100,255,0.2)",
@@ -69,7 +72,7 @@ export default function Home() {
               fontWeight: 600,
               letterSpacing: 1,
             }}>
-              🏗️ PWOJÈ NASYONAL • PORT-AU-PRINCE, AYITI
+              🏗️ NATIONAL HEALTH PROJECT · PORT-AU-PRINCE, HAITI
             </div>
 
             <h1 style={{
@@ -86,19 +89,35 @@ export default function Home() {
               </span>
             </h1>
 
-            <p style={{ fontSize: 18, color: "#C8E0FF", lineHeight: 1.7, margin: "0 0 32px", maxWidth: 600 }}>
-              Premye sant medikal nasyonal ak kalite entènasyonal ann Ayiti. Sant referans pou tout Karayib la pa 2031 — 1,200 kabann, 12 espesyalite, $850M envestisman.
+            <p style={{ fontSize: 18, color: "#C8E0FF", lineHeight: 1.7, margin: "0 0 12px", maxWidth: 650 }}>
+              Haiti's first world-class national medical center. The Caribbean's reference health hub
+              by 2031 — 1,200 beds, 12 specialties, $850M investment.
+            </p>
+            <p style={{ fontSize: 15, color: C.soft, lineHeight: 1.7, margin: "0 0 32px", maxWidth: 640 }}>
+              Built to serve all Haitians — ending the healthcare crisis, training the next generation
+              of physicians, and putting Haiti on the global medical map.
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 40 }}>
-              <Link to="/vizyon" style={{ textDecoration: "none" }}>
+              <Link to="/about" style={{ textDecoration: "none" }}>
                 <button className="phase-btn" style={{
                   background: `linear-gradient(135deg, ${C.blue}, ${C.accent})`,
                   border: "none", color: "#fff",
                   padding: "14px 28px", borderRadius: 10,
                   fontSize: 15, fontWeight: 700, cursor: "pointer",
                 }}>
-                  🌟 Dekouvri Pwojè A
+                  🌟 Discover the Project
+                </button>
+              </Link>
+              <Link to="/health-crisis" style={{ textDecoration: "none" }}>
+                <button className="phase-btn" style={{
+                  background: "rgba(231,76,60,0.2)",
+                  border: "1px solid rgba(231,76,60,0.4)",
+                  color: "#fff",
+                  padding: "14px 28px", borderRadius: 10,
+                  fontSize: 15, fontWeight: 700, cursor: "pointer",
+                }}>
+                  🚨 Haiti's Health Crisis
                 </button>
               </Link>
               <Link to="/dyaspora" style={{ textDecoration: "none" }}>
@@ -109,7 +128,7 @@ export default function Home() {
                   padding: "14px 28px", borderRadius: 10,
                   fontSize: 15, fontWeight: 700, cursor: "pointer",
                 }}>
-                  💰 Envesti Kounye A
+                  💰 Invest Now
                 </button>
               </Link>
             </div>
@@ -117,11 +136,11 @@ export default function Home() {
             {/* Key stats */}
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               {[
-                { v: "$850M", l: "Bidjè Total" },
-                { v: "1,200", l: "Kabann" },
-                { v: "12", l: "Espesyalite" },
-                { v: "3,500+", l: "Staff" },
-                { v: "2031", l: "Ouvèti" },
+                { v: "$850M", l: "Total Budget" },
+                { v: "1,200", l: "Hospital Beds" },
+                { v: "12", l: "Specialties" },
+                { v: "3,500+", l: "Medical Staff" },
+                { v: "2031", l: "Opening" },
               ].map((s) => (
                 <div key={s.l} className="stat-pill" style={{
                   background: "rgba(0,30,80,0.6)",
@@ -140,14 +159,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Crisis Alert Section */}
+      <section style={{
+        background: "linear-gradient(135deg, rgba(100,10,10,0.4), rgba(0,8,30,0.9))",
+        borderTop: "1px solid rgba(231,76,60,0.2)",
+        borderBottom: "1px solid rgba(231,76,60,0.2)",
+        padding: "48px 24px",
+      }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 36 }}>
+            <div style={{ color: "#FF6B6B", fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>
+              🚨 Why This Project Exists
+            </div>
+            <h2 style={{ fontSize: "clamp(20px,3vw,36px)", fontWeight: 900, margin: "0 0 14px" }}>
+              Haiti Faces a Healthcare Emergency
+            </h2>
+            <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 640, margin: "0 auto 32px" }}>
+              With only 1.4 doctors per 10,000 people and a maternal mortality rate 10× the Caribbean
+              average, Haiti's healthcare crisis demands an urgent, comprehensive response.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px,1fr))", gap: 16, marginBottom: 28 }}>
+            {CRISIS_PREVIEW.map((stat) => (
+              <div key={stat.label} className="card-hover" style={{
+                background: "rgba(231,76,60,0.08)",
+                border: "1px solid rgba(231,76,60,0.2)",
+                borderTop: "3px solid rgba(231,76,60,0.6)",
+                borderRadius: 12, padding: 20,
+              }}>
+                <div style={{ fontSize: 28, marginBottom: 8 }}>{stat.icon}</div>
+                <div style={{ fontSize: 24, fontWeight: 900, color: "#FF6B6B", marginBottom: 4 }}>{stat.value}</div>
+                <div style={{ fontSize: 11, color: "#FF9999", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 8 }}>{stat.unit}</div>
+                <div style={{ color: "#fff", fontWeight: 700, fontSize: 13, marginBottom: 6 }}>{stat.label}</div>
+                <div style={{ color: C.soft, fontSize: 12, lineHeight: 1.5 }}>{stat.desc}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <Link to="/health-crisis" style={{ textDecoration: "none" }}>
+              <button className="phase-btn" style={{
+                background: "rgba(231,76,60,0.15)",
+                border: "1px solid rgba(231,76,60,0.4)",
+                color: "#fff", padding: "12px 28px",
+                borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer",
+              }}>
+                📊 See Full Health Crisis Analysis →
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* What We Are */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "60px 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 48 }}>
           <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>
-            Kisa Nou Ye
+            Our Purpose
           </div>
           <h2 style={{ fontSize: "clamp(24px, 3vw, 40px)", fontWeight: 900, margin: "0 0 16px", letterSpacing: -0.5 }}>
-            Yon Vizyon pou Sante Tout Ayisyen
+            A Vision for Haiti's Health Future
           </h2>
           <p style={{ color: C.soft, fontSize: 16, lineHeight: 1.7, maxWidth: 700, margin: "0 auto" }}>
             {VISION.mission}
@@ -174,8 +244,8 @@ export default function Home() {
       }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>Eksplore Pwojè A</div>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, margin: 0 }}>Tout Seksyon Disponib</h2>
+            <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>Explore the Project</div>
+            <h2 style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, margin: 0 }}>All Sections Available</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 16 }}>
             {QUICK_LINKS.map((lnk) => (
@@ -198,11 +268,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Milestones Timeline */}
+      {/* Timeline Milestones */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "60px 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>Chemen Devlopman</div>
-          <h2 style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, margin: 0 }}>Jalons Prensipal</h2>
+          <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>Development Path</div>
+          <h2 style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, margin: 0 }}>Key Milestones</h2>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
           {MILESTONES.map((m, i) => (
@@ -230,6 +300,18 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <div style={{ textAlign: "center", marginTop: 24 }}>
+          <Link to="/plan" style={{ textDecoration: "none" }}>
+            <button className="phase-btn" style={{
+              background: "rgba(0,60,150,0.4)",
+              border: `1px solid ${C.borderBright}`,
+              color: "#fff", padding: "12px 28px",
+              borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer",
+            }}>
+              See Full Implementation Plan →
+            </button>
+          </Link>
+        </div>
       </section>
 
       {/* CTA Section */}
@@ -246,10 +328,11 @@ export default function Home() {
       }}>
         <div style={{ fontSize: 40, marginBottom: 16 }}>💰</div>
         <h2 style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, margin: "0 0 16px" }}>
-          Patisipe nan Istwa Ayiti
+          Be Part of Haiti's History
         </h2>
         <p style={{ color: C.soft, fontSize: 16, lineHeight: 1.7, maxWidth: 600, margin: "0 auto 28px" }}>
-          Dyaspora Bond disponib kounye a. 5.5% enterè anyèl, matirite 10 ane. Envesti nan sante pèp ayisyen ak nan fiti peyi a.
+          Diaspora Bonds available now — 5.5% annual interest, 10-year maturity.
+          Invest in Haitian health and in the future of the nation.
         </p>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/dyaspora" style={{ textDecoration: "none" }}>
@@ -259,10 +342,10 @@ export default function Home() {
               padding: "14px 32px", borderRadius: 10,
               fontSize: 16, fontWeight: 700, cursor: "pointer",
             }}>
-              Aprann Plis sou Dyaspora Bond
+              Learn About Diaspora Bond
             </button>
           </Link>
-          <Link to="/kontakte" style={{ textDecoration: "none" }}>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
             <button className="phase-btn" style={{
               background: "transparent",
               border: `1px solid ${C.borderBright}`,
@@ -270,7 +353,7 @@ export default function Home() {
               padding: "14px 32px", borderRadius: 10,
               fontSize: 16, fontWeight: 700, cursor: "pointer",
             }}>
-              Kontakte Nou
+              Contact Us
             </button>
           </Link>
         </div>

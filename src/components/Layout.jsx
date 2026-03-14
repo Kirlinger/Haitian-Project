@@ -2,51 +2,47 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { C } from '../data/constants';
 
+// ── Main 8-page navigation ──────────────────────────────────────────────────
+const NAV_PRIMARY = [
+  { label: "About the Project", path: "/about", icon: "🏥" },
+  { label: "Health Crisis", path: "/health-crisis", icon: "🚨" },
+  { label: "Solutions", path: "/solutions", icon: "💡" },
+  { label: "Budget & Funding", path: "/budget", icon: "💰" },
+  { label: "Impact & Results", path: "/impact", icon: "📈" },
+  { label: "Implementation", path: "/plan", icon: "🗓️" },
+];
+
+// ── Detailed sub-navigation groups ──────────────────────────────────────────
 const NAV_GROUPS = [
   {
-    label: "Plan Estratejik",
-    icon: "📊",
+    label: "Deep Dive",
+    icon: "📋",
     items: [
-      { label: "Vizyon & Misyon",    path: "/vizyon" },
-      { label: "Finansman",          path: "/finansman" },
-      { label: "4 Faz Konstriksyon", path: "/faz" },
-      { label: "12 Depatman",        path: "/depatman" },
-      { label: "ROI & Enpak",        path: "/roi" },
+      { label: "Vision & Mission",        path: "/vizyon" },
+      { label: "12 Departments",          path: "/depatman" },
+      { label: "ROI & Projections",       path: "/roi" },
+      { label: "History & Context",       path: "/istwa" },
+      { label: "Technology Details",      path: "/teknoloji" },
     ],
   },
   {
-    label: "Enfòmasyon",
-    icon: "📖",
+    label: "Programs",
+    icon: "🎓",
     items: [
-      { label: "Istwa & Kontèks",    path: "/istwa" },
-      { label: "Ekip Direksyon",     path: "/ekip" },
-      { label: "Patenayi",           path: "/patenayi" },
+      { label: "Medical Training",         path: "/formasyon" },
+      { label: "Research & Science",       path: "/rechech" },
+      { label: "Community Health",         path: "/kominote" },
+      { label: "Diaspora Bond",            path: "/dyaspora" },
+      { label: "Partnerships",             path: "/patenayi" },
     ],
   },
   {
-    label: "Pwogram",
-    icon: "🔬",
+    label: "Info",
+    icon: "ℹ️",
     items: [
-      { label: "Teknoloji & Inovasyon", path: "/teknoloji" },
-      { label: "Fòmasyon & Edikasyon", path: "/formasyon" },
-      { label: "Rechèch & Syans",      path: "/rechech" },
-    ],
-  },
-  {
-    label: "Kominote",
-    icon: "🌍",
-    items: [
-      { label: "Sante Kominote",     path: "/kominote" },
-      { label: "Pwogram Dyaspora",   path: "/dyaspora" },
-      { label: "Aktyalite",          path: "/aktyalite" },
-    ],
-  },
-  {
-    label: "À Propos",
-    icon: "🏛️",
-    items: [
-      { label: "Transparans & Govènans", path: "/transparans" },
-      { label: "Kontakte Nou",           path: "/kontakte" },
+      { label: "Leadership Team",          path: "/ekip" },
+      { label: "Transparency",             path: "/transparans" },
+      { label: "News & Updates",           path: "/aktyalite" },
     ],
   },
 ];
@@ -78,7 +74,7 @@ function DropdownMenu({ group, onClose }) {
             padding: "10px 18px",
             color: C.soft,
             textDecoration: "none",
-            fontSize: 14,
+            fontSize: 13,
             fontWeight: 500,
             transition: "all 0.15s ease",
           }}
@@ -117,6 +113,8 @@ export default function Layout() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
+  const isActive = (path) => location.pathname === path;
+
   return (
     <div style={{ minHeight: "100vh", background: C.bg, fontFamily: "'Segoe UI', sans-serif" }}>
       {/* Top navbar */}
@@ -129,16 +127,16 @@ export default function Layout() {
         backdropFilter: "blur(20px)",
       }}>
         <div style={{
-          maxWidth: 1280,
+          maxWidth: 1400,
           margin: "0 auto",
           padding: "0 20px",
           display: "flex",
           alignItems: "center",
           height: 60,
-          gap: 8,
+          gap: 6,
         }}>
           {/* Logo */}
-          <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10, marginRight: 16, flexShrink: 0 }}>
+          <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10, marginRight: 12, flexShrink: 0 }}>
             <div style={{
               width: 36, height: 36, borderRadius: 8,
               background: `linear-gradient(135deg, ${C.blue}, ${C.accent})`,
@@ -147,12 +145,38 @@ export default function Layout() {
             }}>🏥</div>
             <div>
               <div style={{ color: "#fff", fontSize: 13, fontWeight: 800, lineHeight: 1.2, letterSpacing: 0.3 }}>HNIH</div>
-              <div style={{ color: C.soft, fontSize: 9, letterSpacing: 0.8 }}>HÔPITAL NATIONAL</div>
+              <div style={{ color: C.soft, fontSize: 9, letterSpacing: 0.8 }}>HAITI HEALTH PROJECT</div>
             </div>
           </Link>
 
-          {/* Desktop nav groups */}
+          {/* Primary nav links — desktop */}
           <div style={{ display: "flex", alignItems: "center", gap: 2, flex: 1 }} className="desktop-nav">
+            {NAV_PRIMARY.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                style={{
+                  textDecoration: "none",
+                  display: "flex", alignItems: "center", gap: 5,
+                  padding: "6px 10px",
+                  borderRadius: 8,
+                  fontSize: 12,
+                  fontWeight: 600,
+                  whiteSpace: "nowrap",
+                  color: isActive(item.path) ? "#fff" : C.soft,
+                  background: isActive(item.path) ? "rgba(0,80,200,0.25)" : "transparent",
+                  transition: "all 0.15s ease",
+                  borderBottom: isActive(item.path) ? `2px solid ${C.accent}` : "2px solid transparent",
+                }}
+                onMouseEnter={e => { if (!isActive(item.path)) { e.currentTarget.style.color = "#fff"; e.currentTarget.style.background = "rgba(0,60,160,0.15)"; } }}
+                onMouseLeave={e => { if (!isActive(item.path)) { e.currentTarget.style.color = C.soft; e.currentTarget.style.background = "transparent"; } }}
+              >
+                <span>{item.icon}</span>
+                <span>{item.label}</span>
+              </Link>
+            ))}
+
+            {/* Dropdown groups */}
             {NAV_GROUPS.map((group) => (
               <div key={group.label} style={{ position: "relative" }}>
                 <button
@@ -161,9 +185,9 @@ export default function Layout() {
                     background: openGroup === group.label ? "rgba(0,80,200,0.25)" : "transparent",
                     border: "none",
                     color: openGroup === group.label ? "#fff" : C.soft,
-                    padding: "6px 12px",
+                    padding: "6px 10px",
                     borderRadius: 8,
-                    fontSize: 13,
+                    fontSize: 12,
                     fontWeight: 600,
                     cursor: "pointer",
                     display: "flex",
@@ -184,19 +208,19 @@ export default function Layout() {
           </div>
 
           {/* CTA button */}
-          <Link to="/dyaspora" style={{ textDecoration: "none", flexShrink: 0 }} className="desktop-nav">
+          <Link to="/contact" style={{ textDecoration: "none", flexShrink: 0 }} className="desktop-nav">
             <button style={{
               background: `linear-gradient(135deg, ${C.blue}, ${C.accent})`,
               border: "none",
               color: "#fff",
-              padding: "7px 16px",
+              padding: "7px 14px",
               borderRadius: 8,
               fontSize: 12,
               fontWeight: 700,
               cursor: "pointer",
               whiteSpace: "nowrap",
             }}>
-              💰 Envesti Kounye A
+              💬 Contact / Support
             </button>
           </Link>
 
@@ -242,8 +266,30 @@ export default function Layout() {
               borderBottom: `1px solid ${C.border}`,
               marginBottom: 8,
             }}>
-              🏠 Paj Akèy
+              🏠 Home
             </Link>
+            {/* Primary nav in mobile */}
+            {NAV_PRIMARY.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileOpen(false)}
+                style={{
+                  display: "block",
+                  padding: "10px 20px",
+                  color: isActive(item.path) ? C.light : C.soft,
+                  textDecoration: "none",
+                  fontSize: 14,
+                  fontWeight: isActive(item.path) ? 700 : 500,
+                  borderBottom: `1px solid ${C.border}`,
+                  background: isActive(item.path) ? "rgba(0,80,200,0.15)" : "transparent",
+                }}
+              >
+                {item.icon} {item.label}
+              </Link>
+            ))}
+
+            {/* Groups in mobile */}
             {NAV_GROUPS.map((group) => (
               <div key={group.label}>
                 <button
@@ -289,7 +335,7 @@ export default function Layout() {
               </div>
             ))}
             <div style={{ padding: "12px 20px" }}>
-              <Link to="/dyaspora" onClick={() => setMobileOpen(false)} style={{ textDecoration: "none" }}>
+              <Link to="/contact" onClick={() => setMobileOpen(false)} style={{ textDecoration: "none" }}>
                 <button style={{
                   width: "100%",
                   background: `linear-gradient(135deg, ${C.blue}, ${C.accent})`,
@@ -301,7 +347,7 @@ export default function Layout() {
                   fontWeight: 700,
                   cursor: "pointer",
                 }}>
-                  💰 Envesti nan Dyaspora Bond
+                  💬 Contact / Support
                 </button>
               </Link>
             </div>
@@ -343,7 +389,8 @@ export default function Layout() {
                 </div>
               </div>
               <p style={{ color: C.soft, fontSize: 13, lineHeight: 1.6, margin: "0 0 12px" }}>
-                Bati pou sèvi tout pèp ayisyen. Sant medikal referans Karayib la pou 2031.
+                Haiti's national health project. 1,200 beds, 12 specialties, $850M investment.
+                Opening 2031.
               </p>
               <div style={{ display: "flex", gap: 8 }}>
                 {["𝕏", "in", "f", "📧"].map((s, i) => (
@@ -358,15 +405,16 @@ export default function Layout() {
               </div>
             </div>
 
-            {/* Plan Estratejik */}
+            {/* The Project */}
             <div>
-              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Plan Estratejik</div>
+              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>The Project</div>
               {[
-                { l: "Vizyon & Misyon", p: "/vizyon" },
-                { l: "Finansman", p: "/finansman" },
-                { l: "4 Faz", p: "/faz" },
-                { l: "Depatman", p: "/depatman" },
-                { l: "ROI & Enpak", p: "/roi" },
+                { l: "About HNIH", p: "/about" },
+                { l: "Health Crisis in Haiti", p: "/health-crisis" },
+                { l: "Solutions & Innovations", p: "/solutions" },
+                { l: "Budget & Funding", p: "/budget" },
+                { l: "Impact & Results", p: "/impact" },
+                { l: "Implementation Plan", p: "/plan" },
               ].map((lnk) => (
                 <Link key={lnk.p} to={lnk.p} style={{ display: "block", color: C.soft, textDecoration: "none", fontSize: 13, marginBottom: 8 }}
                   onMouseEnter={e => e.currentTarget.style.color = "#fff"}
@@ -376,15 +424,16 @@ export default function Layout() {
               ))}
             </div>
 
-            {/* Pwogram */}
+            {/* Programs */}
             <div>
-              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Pwogram</div>
+              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Programs & Details</div>
               {[
-                { l: "Teknoloji", p: "/teknoloji" },
-                { l: "Fòmasyon", p: "/formasyon" },
-                { l: "Rechèch", p: "/rechech" },
-                { l: "Kominote", p: "/kominote" },
-                { l: "Dyaspora", p: "/dyaspora" },
+                { l: "12 Departments", p: "/depatman" },
+                { l: "Technology", p: "/teknoloji" },
+                { l: "Medical Training", p: "/formasyon" },
+                { l: "Community Health", p: "/kominote" },
+                { l: "Diaspora Bond", p: "/dyaspora" },
+                { l: "Partnerships", p: "/patenayi" },
               ].map((lnk) => (
                 <Link key={lnk.p} to={lnk.p} style={{ display: "block", color: C.soft, textDecoration: "none", fontSize: 13, marginBottom: 8 }}
                   onMouseEnter={e => e.currentTarget.style.color = "#fff"}
@@ -394,11 +443,11 @@ export default function Layout() {
               ))}
             </div>
 
-            {/* Kontakte */}
+            {/* Contact */}
             <div>
-              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Kontakte Nou</div>
+              <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Contact Us</div>
               {[
-                { icon: "📍", text: "Delmas 33, Port-au-Prince, Ayiti" },
+                { icon: "📍", text: "Delmas 33, Port-au-Prince, Haiti" },
                 { icon: "📞", text: "+509 2940-0000" },
                 { icon: "📧", text: "info@hnih.ht" },
                 { icon: "🌐", text: "www.hnih.ht" },
@@ -408,6 +457,17 @@ export default function Layout() {
                   <span>{c.text}</span>
                 </div>
               ))}
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <button style={{
+                  marginTop: 8,
+                  background: `linear-gradient(135deg, ${C.blue}, ${C.accent})`,
+                  border: "none", color: "#fff",
+                  padding: "8px 18px", borderRadius: 8,
+                  fontSize: 12, fontWeight: 700, cursor: "pointer",
+                }}>
+                  💬 Get In Touch
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -422,13 +482,13 @@ export default function Layout() {
             gap: 8,
           }}>
             <div style={{ color: "#4A6A90", fontSize: 12 }}>
-              © 2025 Hôpital National Intégré d'Haïti (HNIH). Tout dwa rezève.
+              © 2025 Hôpital National Intégré d'Haïti (HNIH). All rights reserved.
             </div>
             <div style={{ display: "flex", gap: 16 }}>
               {[
-                { l: "Transparans", p: "/transparans" },
-                { l: "Aktyalite", p: "/aktyalite" },
-                { l: "Kontakte", p: "/kontakte" },
+                { l: "Transparency", p: "/transparans" },
+                { l: "News", p: "/aktyalite" },
+                { l: "Contact", p: "/contact" },
               ].map((lnk) => (
                 <Link key={lnk.p} to={lnk.p} style={{ color: "#4A6A90", textDecoration: "none", fontSize: 12 }}>{lnk.l}</Link>
               ))}
@@ -439,3 +499,4 @@ export default function Layout() {
     </div>
   );
 }
+
