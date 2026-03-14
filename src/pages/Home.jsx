@@ -1,31 +1,34 @@
 import { Link } from 'react-router-dom';
 import heroImg from '../assets/hero.png';
-import { C, VISION } from '../data/constants';
+import { C, VISION, CRISIS_STATS, TIMELINE_PHASES } from '../data/constants';
 import { Card, Badge } from '../components/UI';
 
 const QUICK_LINKS = [
-  { icon: "🌟", title: "Vizyon & Misyon", desc: "Misyon, vizyon ak valè fondamantal", path: "/vizyon", color: C.blue },
-  { icon: "💼", title: "Finansman $850M", desc: "6 sous finansman ak plan detaye", path: "/finansman", color: "#003087" },
-  { icon: "🗓️", title: "4 Faz Konstriksyon", desc: "Pwogram 5 ane konplè", path: "/faz", color: C.steel },
-  { icon: "🏥", title: "12 Depatman", desc: "Espesyalite medikal modèn", path: "/depatman", color: "#8E44AD" },
-  { icon: "📈", title: "ROI & Enpak", desc: "Retou sou envestisman & chif kle", path: "/roi", color: C.success },
-  { icon: "📡", title: "Teknoloji", desc: "IRM, IA, Telemedsèn & plis", path: "/teknoloji", color: "#00A3E0" },
-  { icon: "🎓", title: "Fòmasyon", desc: "Pwogram rezidans & bous etid", path: "/formasyon", color: "#E67E22" },
-  { icon: "🌍", title: "Kominote", desc: "9 klinik satelit, sèvis gratis", path: "/kominote", color: "#27AE60" },
-  { icon: "💰", title: "Dyaspora Bond", desc: "Envesti 5.5% sou 10 ane", path: "/dyaspora", color: "#F39C12" },
-  { icon: "🤝", title: "Patenayi", desc: "OMS, BM, Harvard & plis", path: "/patenayi", color: "#C0392B" },
-  { icon: "📰", title: "Aktyalite", desc: "Nouvèl & anonsman resan", path: "/aktyalite", color: "#1ABC9C" },
-  { icon: "📞", title: "Kontakte Nou", desc: "Adrès, telefòn, fòm kontak", path: "/kontakte", color: "#9B59B6" },
+  { icon: "🏥", title: "À Propos du Projet", desc: "Mission, vision et présentation du HNIH", path: "/about", color: C.blue },
+  { icon: "🚨", title: "Crise Sanitaire en Haïti", desc: "Statistiques, contexte et causes profondes", path: "/health-crisis", color: "#E74C3C" },
+  { icon: "💡", title: "Solutions & Innovations", desc: "Comment le HNIH répond à la crise", path: "/solutions", color: "#27AE60" },
+  { icon: "💼", title: "Budget & Financement 850M$", desc: "6 sources de financement, plan détaillé", path: "/budget", color: "#003087" },
+  { icon: "📈", title: "Impact & Résultats", desc: "ROI, projections & impact sur la population", path: "/impact", color: C.success },
+  { icon: "🗓️", title: "Plan de Mise en Œuvre", desc: "Programme de construction en 4 phases, 5 ans", path: "/plan", color: C.steel },
+  { icon: "🏗️", title: "12 Depatman", desc: "Toutes les spécialités médicales en détail", path: "/depatman", color: "#8E44AD" },
+  { icon: "📡", title: "Teknoloji", desc: "IRM, IA, Télémédecine & plus encore", path: "/teknoloji", color: "#00A3E0" },
+  { icon: "🎓", title: "Fòmasyon Medikal", desc: "Pwogram rezidans & bous etid", path: "/formasyon", color: "#E67E22" },
+  { icon: "🌍", title: "Sante Kominotè", desc: "9 klinik satelit, sèvis gratis", path: "/kominote", color: "#27AE60" },
+  { icon: "💰", title: "Obligasyon Dyaspora", desc: "Envesti à 5,5% sou 10 ane", path: "/dyaspora", color: "#F39C12" },
+  { icon: "📞", title: "Kontakte / Sipò", desc: "Adrès, telefòn, fòm kontak", path: "/contact", color: "#9B59B6" },
 ];
 
 const MILESTONES = [
-  { year: "2025", label: "Kòmansman Pwojè", desc: "Plas tè chwazi, finansman kòmanse, ekip fondatè an plas", done: true },
-  { year: "2026", label: "Travay Konstriksyon", desc: "Fondas, enfrastrikti, premye bilding Ijans & ICU", done: true },
-  { year: "2027", label: "Ouvèti Faz 1", desc: "Ijans, ICU, 4 sal operasyon, laboratwa debaz ouvri", done: false },
-  { year: "2028", label: "Espesyalite Klinik", desc: "Matènite, Kardyoloji, Nèwoloji, Pedyatri aktif", done: false },
-  { year: "2029", label: "Teknoloji Avanse", desc: "IRM 3T, Sant Kansè, Robotik, Telemedsèn nasyonal", done: false },
-  { year: "2031", label: "Gran Ouvèti Konplè", desc: "Seremoni nasyonal, 1200 kabann, akreditasyon JCI", done: false },
+  { year: "2025", label: "Fondation du Projet", desc: "Site sélectionné, financement sécurisé, équipe fondatrice en place", done: true },
+  { year: "2026", label: "Début des Travaux", desc: "Fondations, infrastructure, premier bâtiment Urgences & USI", done: true },
+  { year: "2027", label: "Ouverture Phase 1", desc: "Urgences, USI, 4 blocs opératoires, laboratoire de base ouvert", done: false },
+  { year: "2028", label: "Spécialités Cliniques", desc: "Maternité, Cardiologie, Neurologie, Pédiatrie activées", done: false },
+  { year: "2029", label: "Technologie Avancée", desc: "IRM 3T, Centre du Cancer, Robotique, Télémédecine Nationale", done: false },
+  { year: "2031", label: "Grande Inauguration", desc: "Cérémonie nationale, 1 200 lits, accréditation internationale JCI", done: false },
 ];
+
+// Abbreviated crisis stats for the home page preview
+const CRISIS_PREVIEW = CRISIS_STATS.slice(0, 4);
 
 export default function Home() {
   return (
@@ -56,7 +59,7 @@ export default function Home() {
           padding: "80px 24px",
           width: "100%",
         }}>
-          <div style={{ maxWidth: 760 }}>
+          <div style={{ maxWidth: 780 }}>
             <div style={{
               display: "inline-flex", alignItems: "center", gap: 8,
               background: "rgba(0,100,255,0.2)",
@@ -69,7 +72,7 @@ export default function Home() {
               fontWeight: 600,
               letterSpacing: 1,
             }}>
-              🏗️ PWOJÈ NASYONAL • PORT-AU-PRINCE, AYITI
+              🏗️ PWOJÈ SANTE NASYONAL · PO-O-PRENS, AYITI
             </div>
 
             <h1 style={{
@@ -82,16 +85,21 @@ export default function Home() {
               <span style={{ color: "#fff" }}>Hôpital National</span>
               <br />
               <span style={{ background: `linear-gradient(90deg, ${C.accent}, ${C.light})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Intégré d'Haïti
+                Intégré d’Haïti
               </span>
             </h1>
 
-            <p style={{ fontSize: 18, color: "#C8E0FF", lineHeight: 1.7, margin: "0 0 32px", maxWidth: 600 }}>
-              Premye sant medikal nasyonal ak kalite entènasyonal ann Ayiti. Sant referans pou tout Karayib la pa 2031 — 1,200 kabann, 12 espesyalite, $850M envestisman.
+            <p style={{ fontSize: 18, color: "#C8E0FF", lineHeight: 1.7, margin: "0 0 12px", maxWidth: 650 }}>
+              Premier centre médical national de classe mondiale en Haïti. Pôle de référence sanitaire des Caraïbes
+              d’ici 2031 — 1 200 lits, 12 spécialités, investissement de 850M$.
+            </p>
+            <p style={{ fontSize: 15, color: C.soft, lineHeight: 1.7, margin: "0 0 32px", maxWidth: 640 }}>
+              Bâti pou sèvi tout pèp ayisyen — pou mete fen nan kriz sante, fòme pwochen jenerasyon doktè
+              yo ak mete Ayiti sou kat medikal mondyal la.
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 40 }}>
-              <Link to="/vizyon" style={{ textDecoration: "none" }}>
+              <Link to="/about" style={{ textDecoration: "none" }}>
                 <button className="phase-btn" style={{
                   background: `linear-gradient(135deg, ${C.blue}, ${C.accent})`,
                   border: "none", color: "#fff",
@@ -99,6 +107,17 @@ export default function Home() {
                   fontSize: 15, fontWeight: 700, cursor: "pointer",
                 }}>
                   🌟 Dekouvri Pwojè A
+                </button>
+              </Link>
+              <Link to="/health-crisis" style={{ textDecoration: "none" }}>
+                <button className="phase-btn" style={{
+                  background: "rgba(231,76,60,0.2)",
+                  border: "1px solid rgba(231,76,60,0.4)",
+                  color: "#fff",
+                  padding: "14px 28px", borderRadius: 10,
+                  fontSize: 15, fontWeight: 700, cursor: "pointer",
+                }}>
+                  🚨 Kriz Sante Ayiti
                 </button>
               </Link>
               <Link to="/dyaspora" style={{ textDecoration: "none" }}>
@@ -117,10 +136,10 @@ export default function Home() {
             {/* Key stats */}
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               {[
-                { v: "$850M", l: "Bidjè Total" },
-                { v: "1,200", l: "Kabann" },
+                { v: "850M$", l: "Bidjè Total" },
+                { v: "1 200", l: "Kabann" },
                 { v: "12", l: "Espesyalite" },
-                { v: "3,500+", l: "Staff" },
+                { v: "3 500+", l: "Pèsonèl" },
                 { v: "2031", l: "Ouvèti" },
               ].map((s) => (
                 <div key={s.l} className="stat-pill" style={{
@@ -140,11 +159,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Crisis Alert Section */}
+      <section style={{
+        background: "linear-gradient(135deg, rgba(100,10,10,0.4), rgba(0,8,30,0.9))",
+        borderTop: "1px solid rgba(231,76,60,0.2)",
+        borderBottom: "1px solid rgba(231,76,60,0.2)",
+        padding: "48px 24px",
+      }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 36 }}>
+            <div style={{ color: "#FF6B6B", fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>
+              🚨 Poukisa Pwojè Sa Egziste
+            </div>
+            <h2 style={{ fontSize: "clamp(20px,3vw,36px)", fontWeight: 900, margin: "0 0 14px" }}>
+              Ayiti Fè Fas ak Ijans Sanitè
+            </h2>
+            <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 640, margin: "0 auto 32px" }}>
+              Avèk sèlman 1,4 doktè pou 10 000 moun ak yon to mortalite matènèl 10× pi wo pase mwayèn Karayib la,
+              kriz sante Ayiti a egzije yon repons ijan ak konplè.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px,1fr))", gap: 16, marginBottom: 28 }}>
+            {CRISIS_PREVIEW.map((stat) => (
+              <div key={stat.label} className="card-hover" style={{
+                background: "rgba(231,76,60,0.08)",
+                border: "1px solid rgba(231,76,60,0.2)",
+                borderTop: "3px solid rgba(231,76,60,0.6)",
+                borderRadius: 12, padding: 20,
+              }}>
+                <div style={{ fontSize: 28, marginBottom: 8 }}>{stat.icon}</div>
+                <div style={{ fontSize: 24, fontWeight: 900, color: "#FF6B6B", marginBottom: 4 }}>{stat.value}</div>
+                <div style={{ fontSize: 11, color: "#FF9999", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 8 }}>{stat.unit}</div>
+                <div style={{ color: "#fff", fontWeight: 700, fontSize: 13, marginBottom: 6 }}>{stat.label}</div>
+                <div style={{ color: C.soft, fontSize: 12, lineHeight: 1.5 }}>{stat.desc}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <Link to="/health-crisis" style={{ textDecoration: "none" }}>
+              <button className="phase-btn" style={{
+                background: "rgba(231,76,60,0.15)",
+                border: "1px solid rgba(231,76,60,0.4)",
+                color: "#fff", padding: "12px 28px",
+                borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer",
+              }}>
+                📊 Analiz Konplè Kriz Sante →
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* What We Are */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "60px 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 48 }}>
           <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>
-            Kisa Nou Ye
+            Nou Rele Sa
           </div>
           <h2 style={{ fontSize: "clamp(24px, 3vw, 40px)", fontWeight: 900, margin: "0 0 16px", letterSpacing: -0.5 }}>
             Yon Vizyon pou Sante Tout Ayisyen
@@ -198,7 +268,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Milestones Timeline */}
+      {/* Timeline Milestones */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "60px 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <div style={{ color: C.accent, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>Chemen Devlopman</div>
@@ -230,6 +300,18 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <div style={{ textAlign: "center", marginTop: 24 }}>
+          <Link to="/plan" style={{ textDecoration: "none" }}>
+            <button className="phase-btn" style={{
+              background: "rgba(0,60,150,0.4)",
+              border: `1px solid ${C.borderBright}`,
+              color: "#fff", padding: "12px 28px",
+              borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer",
+            }}>
+              Wè Plan Konplè de Aplikasyon →
+            </button>
+          </Link>
+        </div>
       </section>
 
       {/* CTA Section */}
@@ -249,7 +331,8 @@ export default function Home() {
           Patisipe nan Istwa Ayiti
         </h2>
         <p style={{ color: C.soft, fontSize: 16, lineHeight: 1.7, maxWidth: 600, margin: "0 auto 28px" }}>
-          Dyaspora Bond disponib kounye a. 5.5% enterè anyèl, matirite 10 ane. Envesti nan sante pèp ayisyen ak nan fiti peyi a.
+          Obligasyon Dyaspora disponib kounye a — 5,5% enterè anyèl, matirite 10 ane.
+          Envesti nan sante pèp ayisyen ak nan fiti peyi a.
         </p>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <Link to="/dyaspora" style={{ textDecoration: "none" }}>
@@ -259,10 +342,10 @@ export default function Home() {
               padding: "14px 32px", borderRadius: 10,
               fontSize: 16, fontWeight: 700, cursor: "pointer",
             }}>
-              Aprann Plis sou Dyaspora Bond
+              Aprann sou Obligasyon Dyaspora
             </button>
           </Link>
-          <Link to="/kontakte" style={{ textDecoration: "none" }}>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
             <button className="phase-btn" style={{
               background: "transparent",
               border: `1px solid ${C.borderBright}`,

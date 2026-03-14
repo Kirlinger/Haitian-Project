@@ -4,6 +4,256 @@ export const fmtUSD = (n) => `$${n.toLocaleString()}M`;
 export const fmtHTG = (n) =>
   `G ${(n * RATE).toLocaleString(undefined, { maximumFractionDigits: 0 })}M`;
 
+// ─── Haiti Healthcare Crisis Data ─────────────────────────────────────────────
+export const CRISIS_STATS = [
+  { value: "1,4", unit: "pour 10 000", label: "Densité des Médecins", desc: "Seulement 1,4 médecin pour 10 000 personnes, contre 25+ dans les pays développés", icon: "🩺", severity: "critical" },
+  { value: "529", unit: "pour 100 000", label: "Mortalité Maternelle", desc: "Parmi les plus élevés de l’hémisphère occidental — 10× la moyenne caribéenne", icon: "🤰", severity: "critical" },
+  { value: "42", unit: "pour 1 000", label: "Mortalité des Moins de 5 Ans", desc: "42 enfants pour 1 000 naissances vivantes décèdent avant l’âge de 5 ans", icon: "💔", severity: "critical" },
+  { value: "36%", unit: "de la population", label: "Accès aux Soins Non Satisfait", desc: "Plus d’un tiers des Haïtiens n’ont accès à aucun service de santé", icon: "🚫", severity: "high" },
+  { value: "$13", unit: "USD/an", label: "Dépenses de Santé/Personne", desc: "Le gouvernement dépense seulement 13$ par habitant par an pour la santé (l’OMS recommande 86$+)", icon: "💸", severity: "critical" },
+  { value: "0,3", unit: "lits pour 1 000", label: "Densité des Lits Hospitaliers", desc: "Seulement 0,3 lit d’hôpital pour 1 000 personnes — bien en dessous de la moyenne mondiale de 2,5", icon: "🛏️", severity: "critical" },
+  { value: "62%", unit: "des décès", label: "Décès Évitables", desc: "62% des décès en Haïti pourraient être évités avec des soins médicaux de base", icon: "⚠️", severity: "high" },
+  { value: "$300M+", unit: "par an", label: "Fuite des Devises Médicales", desc: "Les Haïtiens dépensent plus de 300 millions de dollars par an pour se soigner à l’étranger", icon: "✈️", severity: "high" },
+];
+
+export const HEALTH_PROBLEMS = [
+  {
+    icon: "🏚️", title: "Infrastructures Dégradées", color: "#E74C3C",
+    points: [
+      "80% des établissements de santé ne respectent pas les normes minimales de l’OMS",
+      "Les dommages du séisme de 2010 restent non réparés dans de nombreux sites",
+      "Seulement 2 scanners CT fonctionnels dans tout le pays",
+      "Grave pénurie de lits en soins intensifs — moins de 100 dans tout le pays",
+      "L’électricité peu fiable perturbe quotidiennement les équipements vitaux",
+    ],
+    stat: "80%", statLabel: "Établissements sous les Normes",
+  },
+  {
+    icon: "👨‍⚕️", title: "Crise du Personnel de Santé", color: "#E67E22",
+    points: [
+      "Plus de 60% des médecins haïtiens formés émigrent dans les 5 ans",
+      "Aucun programme complet de résidence médicale disponible dans le pays",
+      "Ratio infirmière/patient de 1:50 (l’OMS recommande 1:6)",
+      "Moins de 20 chirurgiens spécialisés pour 11 millions de personnes",
+      "Les bas salaires poussent les talents vers la Rép. Dominicaine et les USA",
+    ],
+    stat: "60%+", statLabel: "Taux de Fuite des Médecins",
+  },
+  {
+    icon: "💊", title: "Médicaments & Chaîne d’Approvisionnement", color: "#8E44AD",
+    points: [
+      "70% des médicaments essentiels doivent être importés",
+      "Ruptures fréquentes de médicaments dans les hôpitaux publics",
+      "Défaillances de la chaîne du froid affectant l’efficacité des vaccins",
+      "Aucune capacité de production pharmaceutique nationale",
+      "Les médicaments du marché noir représentent de sérieux risques sanitaires",
+    ],
+    stat: "70%", statLabel: "Médicaments Importés",
+  },
+  {
+    icon: "🦠", title: "Fardeau des Maladies", color: "#27AE60",
+    points: [
+      "Épidémie de choléra en recrudescence depuis 2022 (6 000+ nouveaux cas)",
+      "Prévalence du VIH à 2,3% — la plus élevée des Caraïbes",
+      "Taux de tuberculose de 212 pour 100 000 (10× la moyenne régionale)",
+      "Paludisme endémique dans les zones rurales et côtières",
+      "Maladies non transmissibles en forte hausse sans soins spécialisés",
+    ],
+    stat: "2,3%", statLabel: "Prévalence du VIH",
+  },
+  {
+    icon: "🏥", title: "Barrières Géographiques d’Accès", color: "#2980B9",
+    points: [
+      "Seul Port-au-Prince dispose d’une forme de soins spécialisés",
+      "La population rurale (65%) parcourt 4h+ pour des soins de base",
+      "Aucun système d’ambulance fonctionnel en dehors de la capitale",
+      "9 des 10 départements n’ont aucun médecin spécialiste",
+      "Les communautés insulaires dépendent totalement des cliniques ONG",
+    ],
+    stat: "65%", statLabel: "Population Rurale Non Desservie",
+  },
+  {
+    icon: "💰", title: "Barrières Financières aux Soins", color: "#F39C12",
+    points: [
+      "Plus de 60% des familles haïtiennes ne peuvent pas se permettre une consultation de base",
+      "Les dépenses directes représentent 45% de toutes les dépenses de santé",
+      "Aucun système d’assurance maladie nationale fonctionnel",
+      "Les dépenses catastrophiques poussent les familles dans la pauvreté",
+      "Les soins d’urgence sont souvent refusés sans paiement préalable",
+    ],
+    stat: "45%", statLabel: "Dépenses de Santé Directes",
+  },
+];
+
+export const HEALTH_COMPARISONS = [
+  { country: "Haïti",            physicians: 1.4,  maternal: 529, life: 64,  beds: 0.3,  spending: 13  },
+  { country: "Rép. Dominicaine", physicians: 15.3, maternal: 107, life: 74,  beds: 1.6,  spending: 420 },
+  { country: "Cuba",             physicians: 84.2, maternal: 36,  life: 79,  beds: 5.3,  spending: 813 },
+  { country: "Jamaïque",         physicians: 12.8, maternal: 80,  life: 76,  beds: 1.7,  spending: 362 },
+  { country: "Moy. (Caraïbes)",  physicians: 18.0, maternal: 95,  life: 75,  beds: 2.0,  spending: 380 },
+  { country: "Objectif HNIH",    physicians: 8.0,  maternal: 150, life: 72,  beds: 1.2,  spending: 120 },
+];
+
+export const SOLUTIONS_LIST = [
+  {
+    icon: "🏥", title: "Campus Hospitalier de Classe Mondiale", color: "#0055B3",
+    desc: "Un hôpital national de référence de 1 200 lits avec 12 spécialités, construit selon les normes d’accréditation internationale JCI — le premier en Haïti.",
+    details: [
+      "12 départements spécialisés couvrant tous les domaines médicaux majeurs",
+      "USI avec 80 lits de soins intensifs (contre <100 dans tout le pays aujourd’hui)",
+      "4 blocs opératoires + salle de chirurgie cardiaque",
+      "Hélipad pour le transport médical d’urgence",
+      "40% des lits réservés aux soins gratuits pour les plus démunis",
+    ],
+  },
+  {
+    icon: "📡", title: "Réseau de Télémédecine", color: "#0077D4",
+    desc: "Un réseau de cliniques satellites reliant 9 centres de santé provinciaux via la télémédecine en temps réel, apportant des soins spécialisés dans la Haïti rurale.",
+    details: [
+      "1 clinique par département (10 départements couverts)",
+      "Consultations vidéo avec les spécialistes du HNIH",
+      "Soutien diagnostique à distance et suivi",
+      "Unités de santé mobiles pour les communautés éloignées",
+      "Dossiers médicaux numériques partagés dans tout le réseau",
+    ],
+  },
+  {
+    icon: "🎓", title: "Pôle d’Enseignement Médical", color: "#00A3E0",
+    desc: "Le premier programme complet de résidence médicale d’Haïti, formant 500 professionnels de santé par an pour éliminer le cycle de fuite des cerveaux.",
+    details: [
+      "Programmes de résidence dans 12 spécialités",
+      "500 médecins, infirmières et techniciens formés annuellement",
+      "Partenariats internationaux avec Harvard, Tulane et McGill",
+      "Programmes de bourses pour les étudiants talentueux à faibles revenus",
+      "Formation continue pour les professionnels de santé en exercice",
+    ],
+  },
+  {
+    icon: "🤖", title: "IA & Santé Numérique", color: "#8E44AD",
+    desc: "Outils de diagnostic IA de pointe, dossiers de santé électroniques et systèmes hospitaliers intelligents pour maximiser l’efficacité et la qualité des soins.",
+    details: [
+      "Lecture radiologique assistée par IA (radiographie, scanner, IRM)",
+      "Système national de Dossier Médical Électronique",
+      "Analyses prédictives pour la prévention des épidémies",
+      "Systèmes intelligents de gestion des rendez-vous et des lits",
+      "Surveillance des patients en temps réel avec dispositifs IoT",
+    ],
+  },
+  {
+    icon: "🧬", title: "Centre de Recherche & Innovation", color: "#C0392B",
+    desc: "Le premier laboratoire national de recherche médicale d’Haïti, générant des connaissances scientifiques sur les maladies tropicales et les défis sanitaires propres à Haïti.",
+    details: [
+      "Laboratoire de recherche BSL-2 pour les maladies infectieuses",
+      "Centre de recherche génétique pour le diagnostic des maladies rares",
+      "Programme d’essais cliniques avec des partenaires internationaux",
+      "Objectif : 50+ publications évaluées par les pairs par an",
+      "Centre national de surveillance des maladies et des données",
+    ],
+  },
+  {
+    icon: "🌱", title: "Système de Santé Durable", color: "#27AE60",
+    desc: "Un modèle financièrement autonome combinant service public et efficacité privée — 40% de soins gratuits financés par les recettes des services premium.",
+    details: [
+      "Installation solaire de 2 MW pour l’indépendance énergétique",
+      "Collecte des eaux de pluie et usine de purification d’eau",
+      "Tourisme médical ciblant le marché caribéen (50M$/an de recettes)",
+      "Pharmacie avec 100+ médicaments génériques produits localement",
+      "Équilibre financier dès l’Année 8, rentable à long terme",
+    ],
+  },
+];
+
+export const PARTNERS = [
+  { name: "Organisation Mondiale de la Santé", abbr: "OMS", type: "Technique", icon: "🌍", desc: "Normes techniques, soutien à l’accréditation et partenariat pour la surveillance des maladies" },
+  { name: "Groupe de la Banque Mondiale", abbr: "BM", type: "Finance", icon: "🏦", desc: "Prêt concessionnel de 150M$ à 1,5% sur 30 ans pour l’infrastructure" },
+  { name: "Banque Inter-Américaine de Dév.", abbr: "BID", type: "Finance", icon: "🌎", desc: "Financement de 50M$ pour les composantes de renforcement du système de santé" },
+  { name: "USAID / Gouvernement US", abbr: "USAID", type: "Donateur", icon: "🇺🇸", desc: "Subventions ciblées pour la santé maternelle, le VIH/SIDA et les programmes de formation" },
+  { name: "Agence Française de Dév.", abbr: "AFD", type: "Donateur", icon: "🇫🇷", desc: "Subvention de 40M€ pour l’infrastructure et les composantes de développement durable" },
+  { name: "Faculté de Médecine d’Harvard", abbr: "HMS", type: "Académique", icon: "🎓", desc: "Échanges de professeurs, développement des programmes et recherches conjointes" },
+  { name: "Université Tulane", abbr: "Tulane", type: "Académique", icon: "📚", desc: "Expertise en médecine tropicale et co-développement du programme de résidence" },
+  { name: "Organisation Panaméricaine de la Santé", abbr: "PAHO", type: "Technique", icon: "🏥", desc: "Coordination sanitaire régionale, approvisionnement en vaccins et déclaration des maladies" },
+  { name: "Médecins Sans Frontières", abbr: "MSF", type: "ONG", icon: "❤️‍🩹", desc: "Formation des agents de santé communautaire et protocoles d’intervention d’urgence" },
+  { name: "Clinton Health Access Initiative", abbr: "CHAI", type: "ONG", icon: "💊", desc: "Optimisation de la chaîne d’approvisionnement en médicaments et négociation des prix" },
+  { name: "Gouvernement Canadien", abbr: "ACDI", type: "Donateur", icon: "🇨🇦", desc: "Soutien de 30M CAD$ pour l’éducation infirmière et la santé communautaire" },
+  { name: "Diaspora Haïtienne", abbr: "Bond", type: "Finance", icon: "💰", desc: "100M$ via les Obligations Diaspora à 5,5% de rendement annuel sur 10 ans" },
+];
+
+export const TIMELINE_PHASES = [
+  {
+    phase: "Phase 0", period: "2025 T1–T4", title: "Fondation & Planification",
+    color: "#7EC8E3", status: "active",
+    milestones: [
+      "Acquisition du terrain et étude environnementale",
+      "Finalisation du design architectural",
+      "Accords de financement signés (200M$ sécurisés)",
+      "Recrutement de l’équipe de direction de 50 personnes",
+      "Consultation communautaire terminée",
+    ],
+  },
+  {
+    phase: "Phase 1", period: "2026 T1 – 2027 T2", title: "Urgences & Soins Critiques",
+    color: "#003087", status: "planned",
+    milestones: [
+      "Fondations, réseaux et gros œuvre du bâtiment principal",
+      "Centre d’Urgences & Traumatologie de 80 lits ouvert",
+      "USI complète avec 40 lits de soins intensifs",
+      "4 blocs opératoires opérationnels",
+      "Laboratoire de base et radiologie",
+      "200 membres du personnel fondateur formés et certifiés",
+    ],
+  },
+  {
+    phase: "Phase 2", period: "2027 T3 – 2028 T4", title: "Spécialités Cliniques",
+    color: "#0055B3", status: "planned",
+    milestones: [
+      "Maternité de 120 lits & NICU Niveau 3",
+      "Service de Pédiatrie de 80 lits",
+      "Unité de Cardiologie & Chirurgie Cardiaque",
+      "Unité de Neurologie & AVC ouverte",
+      "Orthopédie & Traumatologie Avancée",
+      "Clinique dentaire (30 fauteuils)",
+      "École de médecine — première promotion de 100 résidents",
+    ],
+  },
+  {
+    phase: "Phase 3", period: "2029 T1 – 2030 T2", title: "Technologie Avancée",
+    color: "#0077D4", status: "planned",
+    milestones: [
+      "Centre National du Cancer — radiothérapie Linac",
+      "IRM 3 Tesla + Scanner CT 128 coupes",
+      "Système de chirurgie robotique Da Vinci",
+      "Plateforme de diagnostic IA lancée",
+      "Réseau de télémédecine — 9 cliniques provinciales",
+      "Accréditation internationale JCI obtenue",
+      "Centre de Génétique & Maladies Rares ouvert",
+    ],
+  },
+  {
+    phase: "Phase 4", period: "2030 T3 – 2031 T4", title: "Expansion Nationale & Inauguration",
+    color: "#00A3E0", status: "planned",
+    milestones: [
+      "Santé Mentale — unité d’hospitalisation de 100 lits",
+      "Capacité totale de 1 200 lits atteinte",
+      "3 500+ membres du personnel entièrement formés et certifiés",
+      "Programme de tourisme médical lancé",
+      "Système national de DMP déployé",
+      "Grande Inauguration — Cérémonie Nationale",
+      "Équilibre financier prévu dès l’Année 8",
+    ],
+  },
+];
+
+export const LONG_TERM_BENEFITS = [
+  { icon: "📉", title: "Sauver 25 000 Vies par An", desc: "Les décès évitables sont considérablement réduits grâce à l’accès aux urgences, aux soins maternels et oncologiques pour tous les Haïtiens.", metric: "25 000", metricLabel: "Vies Sauvées par An" },
+  { icon: "💰", title: "Fin de la Fuite des Devises", desc: "Stopper la fuite annuelle de 300M$+ vers les hôpitaux étrangers. Maintenir les dépenses de santé dans l’économie haïtienne.", metric: "$300M+", metricLabel: "Économies Annuelles" },
+  { icon: "👩‍⚕️", title: "Main-d'Œuvre Médicale Autonome", desc: "500 nouveaux professionnels de santé formés en Haïti chaque année, éliminant le besoin de spécialistes coûteux formés à l’étranger.", metric: "500/an", metricLabel: "Nouveaux Professionnels" },
+  { icon: "🌍", title: "Destination Médicale Caribéenne", desc: "Haïti devient un pôle régional de santé, attirant des patients de toutes les Caraïbes et générant 50M$+/an de tourisme médical.", metric: "$50M/an", metricLabel: "Recettes Tourisme Médical" },
+  { icon: "📊", title: "Impact sur le PIB", desc: "8 000+ emplois directs et indirects créés. Le secteur de la santé contribue à une croissance estimée du PIB de 1,2% sur la première décennie.", metric: "8 000+", metricLabel: "Emplois Créés" },
+  { icon: "🔬", title: "Souveraineté Scientifique", desc: "Haïti produit ses propres recherches médicales, publie à l’international et développe des solutions aux maladies affectant sa population.", metric: "50+", metricLabel: "Publications/An" },
+  { icon: "👶", title: "Révolution de la Santé Maternelle", desc: "Objectif : Réduire la mortalité maternelle d’Haïti de 529 à moins de 150 pour 100 000 naissances vivantes dans les 10 ans d’exploitation.", metric: "−72%", metricLabel: "Réduction Mortalité Maternelle" },
+  { icon: "🏝️", title: "Un Modèle Reproductible", desc: "Le modèle de partenariat public-privé du HNIH devient un modèle pour d’autres nations en développement dans les Caraïbes et en Afrique.", metric: "Modèle", metricLabel: "Pour les Nations en Développement" },
+];
+
 // ─── Colour palette ────────────────────────────────────────────────────────────
 export const C = {
   bg:           "#000d1f",

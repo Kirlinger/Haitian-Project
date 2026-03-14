@@ -1,6 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import About from './pages/About';
+import HealthCrisis from './pages/HealthCrisis';
+import Solutions from './pages/Solutions';
+import ImpactResults from './pages/ImpactResults';
 import Vision from './pages/Vision';
 import Financing from './pages/Financing';
 import Phases from './pages/Phases';
@@ -23,7 +27,17 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+          {/* ── Main 8-page navigation structure ───────────────────── */}
           <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="health-crisis" element={<HealthCrisis />} />
+          <Route path="solutions" element={<Solutions />} />
+          <Route path="budget" element={<Financing />} />
+          <Route path="impact" element={<ImpactResults />} />
+          <Route path="plan" element={<Phases />} />
+          <Route path="contact" element={<Contact />} />
+
+          {/* ── Legacy / detailed sub-pages (kept for deep-linking) ── */}
           <Route path="vizyon" element={<Vision />} />
           <Route path="finansman" element={<Financing />} />
           <Route path="faz" element={<Phases />} />
