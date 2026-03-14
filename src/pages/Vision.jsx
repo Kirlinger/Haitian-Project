@@ -93,7 +93,7 @@ export default function Vision() {
           { icon: "💊", title: "Medikaman Lokal", desc: "Pwodui 30% medikaman esansyèl lokal pou diminye depandans importasyon" },
           { icon: "🎓", title: "Fòme Espesyalis", desc: "500 spesyalis medikal pou chak ane pou satisfè bezwen nasyonal la" },
           { icon: "🔬", title: "Rechèch Nasyonal", desc: "Premye sant rechèch medikal nasyonal ak 50+ piblikasyon ayisyen/ane" },
-          { icon: "💰", title: "Ekonomize Deviz", desc: "Anpeche $300M/ane kouri aletranje pou tretman medikal deyò peyi a" },
+          { icon: "💰", title: "Ekonomize Deviz", desc: "Anpeche G 39 423M/ane kouri aletranje pou tretman medikal deyò peyi a" },
         ].map((g) => (
           <Card key={g.title} className="card-hover">
             <div style={{ fontSize: 28, marginBottom: 10 }}>{g.icon}</div>

@@ -4,8 +4,8 @@ import { SectionTitle, Card, Badge } from '../components/UI';
 const NEWS_ITEMS = [
   {
     date: "15 Jiyè 2025", category: "Finansman", icon: "💰",
-    title: "HNIH Resevwa $200M Premye Tranch BID & Banque Mondiale",
-    summary: "Banque Interaméricaine de Développement ak Banque Mondiale ofisyèlman transmèt premye tranch $200M pou kòmansman travay konstriksyon Hôpital National Intégré d'Haïti.",
+    title: "HNIH Resevwa G 26 282M Premye Tranch BID & Banque Mondiale",
+    summary: "Banque Interaméricaine de Développement ak Banque Mondiale ofisyèlman transmèt premye tranch G 26 282M pou kòmansman travay konstriksyon Hôpital National Intégré d'Haïti.",
     featured: true,
   },
   {
@@ -22,8 +22,8 @@ const NEWS_ITEMS = [
   },
   {
     date: "10 Jen 2025", category: "Dyaspora", icon: "🌎",
-    title: "Dyaspora Bond HNIH Disponib — Premye $25M Deja Subscri",
-    summary: "Premye emisyon Dyaspora Bond HNIH rekòlte $25M nan debi premiè mwa. Kominote ayisyen Etazini ak Kanada montre entèrè fò pou envestisman patriyotik.",
+    title: "Dyaspora Bond HNIH Disponib — Premye G 3 285M Deja Subscri",
+    summary: "Premye emisyon Dyaspora Bond HNIH rekòlte G 3 285M nan debi premiè mwa. Kominote ayisyen Etazini ak Kanada montre entèrè fò pou envestisman patriyotik.",
     featured: false,
   },
   {
@@ -46,20 +46,20 @@ const NEWS_ITEMS = [
   },
   {
     date: "18 Avril 2025", category: "Finansman", icon: "💰",
-    title: "USAID Konfime $50M Gra pou Pwogram Sante Piblik HNIH",
-    summary: "USAID ofisyèlman konfime $50M gra pou pwogram sante piblik HNIH, ki kouvri vaksinasyon, sante matènèl ak fòmasyon pèsonèl sante kominotè.",
+    title: "USAID Konfime G 6 571M Gra pou Pwogram Sante Piblik HNIH",
+    summary: "USAID ofisyèlman konfime G 6 571M gra pou pwogram sante piblik HNIH, ki kouvri vaksinasyon, sante matènèl ak fòmasyon pèsonèl sante kominotè.",
     featured: false,
   },
   {
     date: "5 Avril 2025", category: "Patenayi", icon: "🤝",
-    title: "Gouvènman Kanada Angaje $30M pou Fòmasyon Pèsonèl Medikal",
+    title: "Gouvènman Kanada Angaje G 3 942M pou Fòmasyon Pèsonèl Medikal",
     summary: "Koperasyon Kanadyèn ap finanse fòmasyon 200 spesyalis medikal ayisyen sou 5 ane. Pwogram itilize enstistisyon kanadyèn ak ayisyen pou fòmasyon hybrid.",
     featured: false,
   },
   {
     date: "20 Mas 2025", category: "Rechèch", icon: "🔬",
     title: "Premye Gra NIH Akòde pou Rechèch Cholera ann Ayiti",
-    summary: "National Institutes of Health (NIH) akòde yon gra $5M pou rechèch cholera ak maladi entestinal ann Ayiti. Premye gra NIH pou rechèch medikal ayisyen.",
+    summary: "National Institutes of Health (NIH) akòde yon gra G 657M pou rechèch cholera ak maladi entestinal ann Ayiti. Premye gra NIH pou rechèch medikal ayisyen.",
     featured: false,
   },
   {
@@ -70,8 +70,8 @@ const NEWS_ITEMS = [
   },
   {
     date: "14 Fevriye 2025", category: "Vizyon", icon: "🌟",
-    title: "Prezantasyon Ofisyèl Plan $850M HNIH",
-    summary: "Premye prezantasyon piblik konplè plan $850M Hôpital National Intégré d'Haïti. 1200 kabann, 12 espesyalite, 5 ane konstriksyon. Vizyon 2031 prezante.",
+    title: "Prezantasyon Ofisyèl Plan G 111 699M HNIH",
+    summary: "Premye prezantasyon piblik konplè plan G 111 699M Hôpital National Intégré d'Haïti. 1200 kabann, 12 espesyalite, 5 ane konstriksyon. Vizyon 2031 prezante.",
     featured: false,
   },
 ];
@@ -79,9 +79,9 @@ const NEWS_ITEMS = [
 const CATEGORIES = ["Tout", "Finansman", "Konstriksyon", "Patenayi", "Dyaspora", "Teknoloji", "Rechèch", "Kominote", "Administrasyon", "Vizyon"];
 
 const MILESTONES_ACHIEVED = [
-  { date: "Fevriye 2025", event: "Prezantasyon plan ofisyèl $850M", done: true },
+  { date: "Fevriye 2025", event: "Prezantasyon plan ofisyèl G 111 699M", done: true },
   { date: "Mas 2025", event: "Plas tè Delmas 33 konfime", done: true },
-  { date: "Avril 2025", event: "USAID gra $50M konfime", done: true },
+  { date: "Avril 2025", event: "USAID gra G 6 571M konfime", done: true },
   { date: "Me 2025", event: "CEO nonmen, Konsèy an plas", done: true },
   { date: "Jen 2025", event: "Akò Harvard Medical School", done: true },
   { date: "Jiyè 2025", event: "Finansman BID/Banque Mondiale", done: true },

@@ -30,12 +30,12 @@ const PUBLICATIONS_GOAL = [
 ];
 
 const FUNDING = [
-  { source: "NIH (National Institutes of Health)", amount: "$5M", type: "Gra Rechèch", flag: "🇺🇸" },
-  { source: "Gates Foundation", amount: "$3M", type: "Gra Maladi Tropikale", flag: "💛" },
-  { source: "Wellcome Trust", amount: "$2M", type: "Gra Biomedikal", flag: "🇬🇧" },
-  { source: "USAID Research Grant", amount: "$2.5M", type: "Gra Sante Piblik", flag: "🇺🇸" },
-  { source: "WHO Research Budget", amount: "$1.5M", type: "Kolaborasyon OMS", flag: "🌍" },
-  { source: "HNIH Internal Fund", amount: "$3M", type: "Fon Rechèch Entèn", flag: "🇭🇹" },
+  { source: "NIH (National Institutes of Health)", amount: "G 657M", type: "Gra Rechèch", flag: "🇺🇸" },
+  { source: "Gates Foundation", amount: "G 394M", type: "Gra Maladi Tropikale", flag: "💛" },
+  { source: "Wellcome Trust", amount: "G 263M", type: "Gra Biomedikal", flag: "🇬🇧" },
+  { source: "USAID Research Grant", amount: "G 329M", type: "Gra Sante Piblik", flag: "🇺🇸" },
+  { source: "WHO Research Budget", amount: "G 197M", type: "Kolaborasyon OMS", flag: "🌍" },
+  { source: "HNIH Internal Fund", amount: "G 394M", type: "Fon Rechèch Entèn", flag: "🇭🇹" },
 ];
 
 export default function Research() {
@@ -57,7 +57,7 @@ export default function Research() {
           { v: "20+", l: "Etid/Ane" },
           { v: "50+", l: "Piblikasyon/Ane" },
           { v: "8", l: "Domèn Rechèch" },
-          { v: "$17M", l: "Bidjè Rechèch" },
+          { v: "G 2 234M", l: "Bidjè Rechèch" },
           { v: "BSL-3", l: "Biosafety" },
         ].map((s) => (
           <div key={s.l} className="stat-pill" style={{

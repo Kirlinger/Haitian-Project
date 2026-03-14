@@ -3,11 +3,11 @@ import { SectionTitle, Card, Badge } from '../components/UI';
 
 const DIASPORA_STATS = [
   { value: "2M+", label: "Ayisyen Dyaspora", sub: "Mondyalman" },
-  { value: "$4B+", label: "Remitak/Ane", sub: "30% PIB Ayiti" },
-  { value: "$100M", label: "Objektif Bond", sub: "Pwogram HNIH" },
+  { value: "G 526B+", label: "Remitak/Ane", sub: "30% PIB Ayiti" },
+  { value: "G 13 141M", label: "Objektif Bond", sub: "Pwogram HNIH" },
   { value: "5.5%", label: "Enterè Anyèl", sub: "Garanti Gouvènman" },
   { value: "10 Ane", label: "Matirite Bond", sub: "Retrè kapital" },
-  { value: "$5,000", label: "Minimòm", sub: "Envestisman" },
+  { value: "G 657 050", label: "Minimòm", sub: "Envestisman" },
 ];
 
 const LOCATIONS = [
@@ -24,17 +24,17 @@ const LOCATIONS = [
 const STEPS = [
   { num: "01", title: "Kontakte Biwo Bond", desc: "Rele oswa ekri biwo Dyaspora Bond HNIH. Rezevwa tout dokiman ofisyèl yo.", icon: "📞" },
   { num: "02", title: "Verifikasyon KYC", desc: "Soumèt pasepò + prèv adrès pou verifikasyon idantite (Know Your Customer).", icon: "📋" },
-  { num: "03", title: "Chwazi Montan", desc: "Minimòm $5,000 USD. Pa gen maksimòm. Piman anlòt tranch $1,000 pa $1,000.", icon: "💰" },
+  { num: "03", title: "Chwazi Montan", desc: "Minimòm G 657 050. Pa gen maksimòm. Piman anlòt tranch de G 131 410 chak.", icon: "💰" },
   { num: "04", title: "Transfè Fon", desc: "Transfè bank-a-bank sekirize. Peman pa chèk sètifye oswa virement bank.", icon: "🏦" },
   { num: "05", title: "Resevwa Sètifika", desc: "Bond sètifye ofisyèl rete nan men ou. Enregistre elektronikman ak Ministè Finans.", icon: "📜" },
   { num: "06", title: "Enterè Anyèl", desc: "5.5% enterè peye chak ane pandan 10 ane. Retrè kapital total an ane 10.", icon: "📈" },
 ];
 
 const SUCCESS_STORIES = [
-  { country: "Izrayèl", icon: "🇮🇱", total: "$45B+", desc: "State of Israel Bonds depi 1951 — reyisi finanse eta Izrayèl, finanse lwaye ak bidjè leta depi diaspò jwif mondyal la. Modèl pou tout dyaspora bond." },
-  { country: "End", icon: "🇮🇳", total: "$35B+", desc: "NRI Bonds (Non-Resident Indian Bonds) plizyè seri depi 1991. Kriz deviz 1991 solisyon pa diaspò end — remonte ak siksè." },
-  { country: "Etiyopi", icon: "🇪🇹", total: "$5B+", desc: "Ethiopian Diaspora Bonds pou Grand Ethiopian Renaissance Dam — finanse ak entegre dyaspora entiyopi nan devlopman nasyonal." },
-  { country: "Lewanda", icon: "🇷🇼", total: "$400M", desc: "Genocide survivors bonds pou rekonstwiksyon Lewanda. Modèl siksè pou nasyon ki rekonstwiksyon apre kriz." },
+  { country: "Izrayèl", icon: "🇮🇱", total: "G 5 913B+", desc: "State of Israel Bonds depi 1951 — reyisi finanse eta Izrayèl, finanse lwaye ak bidjè leta depi diaspò jwif mondyal la. Modèl pou tout dyaspora bond." },
+  { country: "End", icon: "🇮🇳", total: "G 4 599B+", desc: "NRI Bonds (Non-Resident Indian Bonds) plizyè seri depi 1991. Kriz deviz 1991 solisyon pa diaspò end — remonte ak siksè." },
+  { country: "Etiyopi", icon: "🇪🇹", total: "G 657B+", desc: "Ethiopian Diaspora Bonds pou Grand Ethiopian Renaissance Dam — finanse ak entegre dyaspora entiyopi nan devlopman nasyonal." },
+  { country: "Lewanda", icon: "🇷🇼", total: "G 52 564M", desc: "Genocide survivors bonds pou rekonstwiksyon Lewanda. Modèl siksè pou nasyon ki rekonstwiksyon apre kriz." },
 ];
 
 export default function Diaspora() {
@@ -60,14 +60,14 @@ export default function Diaspora() {
         <div style={{ fontSize: 48, marginBottom: 16 }}>💰</div>
         <h2 style={{ fontSize: "clamp(20px, 3vw, 32px)", fontWeight: 900, margin: "0 0 12px" }}>Dyaspora Bond HNIH</h2>
         <p style={{ color: C.soft, fontSize: 15, lineHeight: 1.7, maxWidth: 600, margin: "0 auto 24px" }}>
-          Obligasyon souverèn garanti pa Gouvènman Ayiti. 5.5% enterè anyèl, matirite 10 ane. Minimòm $5,000 USD. Aksesib pou tout Ayisyen dyaspora.
+          Obligasyon souverèn garanti pa Gouvènman Ayiti. 5.5% enterè anyèl, matirite 10 ane. Minimòm G 657 050. Aksesib pou tout Ayisyen dyaspora.
         </p>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           {[
             { v: "5.5%", l: "Enterè/Ane" },
             { v: "10 Ane", l: "Matirite" },
-            { v: "$5K", l: "Minimòm" },
-            { v: "$100M", l: "Objektif Total" },
+            { v: "G 657 050", l: "Minimòm" },
+            { v: "G 13 141M", l: "Objektif Total" },
           ].map((s) => (
             <div key={s.l} style={{
               background: "rgba(0,30,80,0.6)",

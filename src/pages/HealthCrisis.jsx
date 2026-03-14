@@ -179,7 +179,7 @@ export default function HealthCrisis() {
             {/* Health Spending */}
             <Card style={{ padding: 24 }}>
               <div style={{ color: C.success, fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 4 }}>Dépenses de Santé</div>
-              <div style={{ color: C.soft, fontSize: 12, marginBottom: 16 }}>USD par habitant par an</div>
+              <div style={{ color: C.soft, fontSize: 12, marginBottom: 16 }}>HTG par habitant par an</div>
               {HEALTH_COMPARISONS.map(c => (
                 <ComparisonBar key={c.country} label={c.country} value={c.spending} max={900} color={C.steel} />
               ))}

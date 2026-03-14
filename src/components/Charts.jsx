@@ -9,12 +9,12 @@ export function DonutChart({ items, total, size = 260 }) {
 
   const startAngles = items.reduce((acc, item) => {
     const prev = acc[acc.length - 1];
-    return [...acc, prev + (item.usd / total) * 2 * Math.PI];
+    return [...acc, prev + (item.htg / total) * 2 * Math.PI];
   }, [START]);
 
   const segments = items.map((item, idx) => {
     const baseAngle = startAngles[idx];
-    const fraction  = item.usd / total;
+    const fraction  = item.htg / total;
     const fullAng   = fraction * 2 * Math.PI;
     const drawAng   = Math.max(fullAng - GAP, 0.001);
     const a1 = baseAngle + GAP / 2;
@@ -36,7 +36,7 @@ export function DonutChart({ items, total, size = 260 }) {
       <circle cx={cx} cy={cy} r={r * 0.88} fill="rgba(0,8,30,0.96)" />
       <text x={cx} y={cy - 10} textAnchor="middle" fill="#fff"
             fontSize="21" fontWeight="800" fontFamily="'Segoe UI',sans-serif">
-        ${total}M
+        G {total.toLocaleString()}M
       </text>
       <text x={cx} y={cy + 12} textAnchor="middle" fill="#7EC8E3"
             fontSize="11" fontFamily="'Segoe UI',sans-serif">
@@ -52,7 +52,7 @@ export function DonutChart({ items, total, size = 260 }) {
 
 // ─── SVG: Revenue vs Expenses 10-year chart ────────────────────────────────────
 export function RevenueChart({ data = PROJECTIONS }) {
-  const maxVal = 165;
+  const maxVal = 21000;
   const W = 600, H = 190;
   const padL = 36, padB = 28, padT = 16, padR = 16;
   const chartW = W - padL - padR;
@@ -62,7 +62,7 @@ export function RevenueChart({ data = PROJECTIONS }) {
 
   return (
     <svg width="100%" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet">
-      {[0, 40, 80, 120, 160].map((v) => {
+      {[0, 5000, 10000, 15000, 20000].map((v) => {
         const y = padT + chartH - (v / maxVal) * chartH;
         return (
           <g key={v}>

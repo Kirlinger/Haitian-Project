@@ -278,7 +278,7 @@ export default function About() {
                 Budget & Financement
               </div>
               <p style={{ color: C.soft, fontSize: 14, lineHeight: 1.6, margin: 0 }}>
-                Examinez le plan de financement de 850M$, la structure d’investissement et le
+                Examinez le plan de financement de G 111 699M, la structure d’investissement et le
                 modèle de viabilité financière à long terme.
               </p>
             </div>
