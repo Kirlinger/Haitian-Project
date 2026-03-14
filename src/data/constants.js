@@ -1,8 +1,7 @@
 // ─── Formatters ───────────────────────────────────────────────────────────────
 export const RATE = 131.41;
-export const fmtUSD = (n) => `$${n.toLocaleString()}M`;
 export const fmtHTG = (n) =>
-  `G ${(n * RATE).toLocaleString(undefined, { maximumFractionDigits: 0 })}M`;
+  `G ${n.toLocaleString(undefined, { maximumFractionDigits: 0 })}M`;
 
 // ─── Haiti Healthcare Crisis Data ─────────────────────────────────────────────
 export const CRISIS_STATS = [
@@ -10,10 +9,10 @@ export const CRISIS_STATS = [
   { value: "529", unit: "pour 100 000", label: "Mortalité Maternelle", desc: "Parmi les plus élevés de l’hémisphère occidental — 10× la moyenne caribéenne", icon: "🤰", severity: "critical" },
   { value: "42", unit: "pour 1 000", label: "Mortalité des Moins de 5 Ans", desc: "42 enfants pour 1 000 naissances vivantes décèdent avant l’âge de 5 ans", icon: "💔", severity: "critical" },
   { value: "36%", unit: "de la population", label: "Accès aux Soins Non Satisfait", desc: "Plus d’un tiers des Haïtiens n’ont accès à aucun service de santé", icon: "🚫", severity: "high" },
-  { value: "$13", unit: "USD/an", label: "Dépenses de Santé/Personne", desc: "Le gouvernement dépense seulement 13$ par habitant par an pour la santé (l’OMS recommande 86$+)", icon: "💸", severity: "critical" },
+  { value: "G 1 708", unit: "HTG/an", label: "Dépenses de Santé/Personne", desc: "Le gouvernement dépense seulement G 1 708 par habitant par an pour la santé (l’OMS recommande G 11 301+)", icon: "💸", severity: "critical" },
   { value: "0,3", unit: "lits pour 1 000", label: "Densité des Lits Hospitaliers", desc: "Seulement 0,3 lit d’hôpital pour 1 000 personnes — bien en dessous de la moyenne mondiale de 2,5", icon: "🛏️", severity: "critical" },
   { value: "62%", unit: "des décès", label: "Décès Évitables", desc: "62% des décès en Haïti pourraient être évités avec des soins médicaux de base", icon: "⚠️", severity: "high" },
-  { value: "$300M+", unit: "par an", label: "Fuite des Devises Médicales", desc: "Les Haïtiens dépensent plus de 300 millions de dollars par an pour se soigner à l’étranger", icon: "✈️", severity: "high" },
+  { value: "G 39 423M+", unit: "par an", label: "Fuite des Devises Médicales", desc: "Les Haïtiens dépensent plus de G 39 423M par an pour se soigner à l’étranger", icon: "✈️", severity: "high" },
 ];
 
 export const HEALTH_PROBLEMS = [
@@ -86,12 +85,12 @@ export const HEALTH_PROBLEMS = [
 ];
 
 export const HEALTH_COMPARISONS = [
-  { country: "Haïti",            physicians: 1.4,  maternal: 529, life: 64,  beds: 0.3,  spending: 13  },
-  { country: "Rép. Dominicaine", physicians: 15.3, maternal: 107, life: 74,  beds: 1.6,  spending: 420 },
-  { country: "Cuba",             physicians: 84.2, maternal: 36,  life: 79,  beds: 5.3,  spending: 813 },
-  { country: "Jamaïque",         physicians: 12.8, maternal: 80,  life: 76,  beds: 1.7,  spending: 362 },
-  { country: "Moy. (Caraïbes)",  physicians: 18.0, maternal: 95,  life: 75,  beds: 2.0,  spending: 380 },
-  { country: "Objectif HNIH",    physicians: 8.0,  maternal: 150, life: 72,  beds: 1.2,  spending: 120 },
+  { country: "Haïti",            physicians: 1.4,  maternal: 529, life: 64,  beds: 0.3,  spending: 1708    },
+  { country: "Rép. Dominicaine", physicians: 15.3, maternal: 107, life: 74,  beds: 1.6,  spending: 55192  },
+  { country: "Cuba",             physicians: 84.2, maternal: 36,  life: 79,  beds: 5.3,  spending: 106836 },
+  { country: "Jamaïque",         physicians: 12.8, maternal: 80,  life: 76,  beds: 1.7,  spending: 47570  },
+  { country: "Moy. (Caraïbes)",  physicians: 18.0, maternal: 95,  life: 75,  beds: 2.0,  spending: 49936  },
+  { country: "Objectif HNIH",    physicians: 8.0,  maternal: 150, life: 72,  beds: 1.2,  spending: 15769  },
 ];
 
 export const SOLUTIONS_LIST = [
@@ -156,7 +155,7 @@ export const SOLUTIONS_LIST = [
     details: [
       "Installation solaire de 2 MW pour l’indépendance énergétique",
       "Collecte des eaux de pluie et usine de purification d’eau",
-      "Tourisme médical ciblant le marché caribéen (50M$/an de recettes)",
+      "Tourisme médical ciblant le marché caribéen (G 6 571M/an de recettes)",
       "Pharmacie avec 100+ médicaments génériques produits localement",
       "Équilibre financier dès l’Année 8, rentable à long terme",
     ],
@@ -165,17 +164,17 @@ export const SOLUTIONS_LIST = [
 
 export const PARTNERS = [
   { name: "Organisation Mondiale de la Santé", abbr: "OMS", type: "Technique", icon: "🌍", desc: "Normes techniques, soutien à l’accréditation et partenariat pour la surveillance des maladies" },
-  { name: "Groupe de la Banque Mondiale", abbr: "BM", type: "Finance", icon: "🏦", desc: "Prêt concessionnel de 150M$ à 1,5% sur 30 ans pour l’infrastructure" },
-  { name: "Banque Inter-Américaine de Dév.", abbr: "BID", type: "Finance", icon: "🌎", desc: "Financement de 50M$ pour les composantes de renforcement du système de santé" },
+  { name: "Groupe de la Banque Mondiale", abbr: "BM", type: "Finance", icon: "🏦", desc: "Prêt concessionnel de G 19 712M à 1,5% sur 30 ans pour l’infrastructure" },
+  { name: "Banque Inter-Américaine de Dév.", abbr: "BID", type: "Finance", icon: "🌎", desc: "Financement de G 6 571M pour les composantes de renforcement du système de santé" },
   { name: "USAID / Gouvernement US", abbr: "USAID", type: "Donateur", icon: "🇺🇸", desc: "Subventions ciblées pour la santé maternelle, le VIH/SIDA et les programmes de formation" },
-  { name: "Agence Française de Dév.", abbr: "AFD", type: "Donateur", icon: "🇫🇷", desc: "Subvention de 40M€ pour l’infrastructure et les composantes de développement durable" },
+  { name: "Agence Française de Dév.", abbr: "AFD", type: "Donateur", icon: "🇫🇷", desc: "Subvention de G 5 677M pour l’infrastructure et les composantes de développement durable" },
   { name: "Faculté de Médecine d’Harvard", abbr: "HMS", type: "Académique", icon: "🎓", desc: "Échanges de professeurs, développement des programmes et recherches conjointes" },
   { name: "Université Tulane", abbr: "Tulane", type: "Académique", icon: "📚", desc: "Expertise en médecine tropicale et co-développement du programme de résidence" },
   { name: "Organisation Panaméricaine de la Santé", abbr: "PAHO", type: "Technique", icon: "🏥", desc: "Coordination sanitaire régionale, approvisionnement en vaccins et déclaration des maladies" },
   { name: "Médecins Sans Frontières", abbr: "MSF", type: "ONG", icon: "❤️‍🩹", desc: "Formation des agents de santé communautaire et protocoles d’intervention d’urgence" },
   { name: "Clinton Health Access Initiative", abbr: "CHAI", type: "ONG", icon: "💊", desc: "Optimisation de la chaîne d’approvisionnement en médicaments et négociation des prix" },
-  { name: "Gouvernement Canadien", abbr: "ACDI", type: "Donateur", icon: "🇨🇦", desc: "Soutien de 30M CAD$ pour l’éducation infirmière et la santé communautaire" },
-  { name: "Diaspora Haïtienne", abbr: "Bond", type: "Finance", icon: "💰", desc: "100M$ via les Obligations Diaspora à 5,5% de rendement annuel sur 10 ans" },
+  { name: "Gouvernement Canadien", abbr: "ACDI", type: "Donateur", icon: "🇨🇦", desc: "Soutien de G 2 917M pour l’éducation infirmière et la santé communautaire" },
+  { name: "Diaspora Haïtienne", abbr: "Bond", type: "Finance", icon: "💰", desc: "G 13 141M via les Obligations Diaspora à 5,5% de rendement annuel sur 10 ans" },
 ];
 
 export const TIMELINE_PHASES = [
@@ -185,7 +184,7 @@ export const TIMELINE_PHASES = [
     milestones: [
       "Acquisition du terrain et étude environnementale",
       "Finalisation du design architectural",
-      "Accords de financement signés (200M$ sécurisés)",
+      "Accords de financement signés (G 26 282M sécurisés)",
       "Recrutement de l’équipe de direction de 50 personnes",
       "Consultation communautaire terminée",
     ],
@@ -245,9 +244,9 @@ export const TIMELINE_PHASES = [
 
 export const LONG_TERM_BENEFITS = [
   { icon: "📉", title: "Sauver 25 000 Vies par An", desc: "Les décès évitables sont considérablement réduits grâce à l’accès aux urgences, aux soins maternels et oncologiques pour tous les Haïtiens.", metric: "25 000", metricLabel: "Vies Sauvées par An" },
-  { icon: "💰", title: "Fin de la Fuite des Devises", desc: "Stopper la fuite annuelle de 300M$+ vers les hôpitaux étrangers. Maintenir les dépenses de santé dans l’économie haïtienne.", metric: "$300M+", metricLabel: "Économies Annuelles" },
+  { icon: "💰", title: "Fin de la Fuite des Devises", desc: "Stopper la fuite annuelle de G 39 423M+ vers les hôpitaux étrangers. Maintenir les dépenses de santé dans l’économie haïtienne.", metric: "G 39 423M+", metricLabel: "Économies Annuelles" },
   { icon: "👩‍⚕️", title: "Main-d'Œuvre Médicale Autonome", desc: "500 nouveaux professionnels de santé formés en Haïti chaque année, éliminant le besoin de spécialistes coûteux formés à l’étranger.", metric: "500/an", metricLabel: "Nouveaux Professionnels" },
-  { icon: "🌍", title: "Destination Médicale Caribéenne", desc: "Haïti devient un pôle régional de santé, attirant des patients de toutes les Caraïbes et générant 50M$+/an de tourisme médical.", metric: "$50M/an", metricLabel: "Recettes Tourisme Médical" },
+  { icon: "🌍", title: "Destination Médicale Caribéenne", desc: "Haïti devient un pôle régional de santé, attirant des patients de toutes les Caraïbes et générant G 6 571M+/an de tourisme médical.", metric: "G 6 571M/an", metricLabel: "Recettes Tourisme Médical" },
   { icon: "📊", title: "Impact sur le PIB", desc: "8 000+ emplois directs et indirects créés. Le secteur de la santé contribue à une croissance estimée du PIB de 1,2% sur la première décennie.", metric: "8 000+", metricLabel: "Emplois Créés" },
   { icon: "🔬", title: "Souveraineté Scientifique", desc: "Haïti produit ses propres recherches médicales, publie à l’international et développe des solutions aux maladies affectant sa population.", metric: "50+", metricLabel: "Publications/An" },
   { icon: "👶", title: "Révolution de la Santé Maternelle", desc: "Objectif : Réduire la mortalité maternelle d’Haïti de 529 à moins de 150 pour 100 000 naissances vivantes dans les 10 ans d’exploitation.", metric: "−72%", metricLabel: "Réduction Mortalité Maternelle" },
@@ -271,17 +270,17 @@ export const C = {
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 export const FINANCING = [
-  { source: "Gouvènman Ayiti",        usd: 250, color: "#003087", detail: "Bidjè nasyonal & obligasyon souverèn" },
-  { source: "BID & Bank Mondyal",      usd: 200, color: "#0055B3", detail: "Prè kondisyonèl 1.5% sou 30 ane" },
-  { source: "Sektè Prive (PPP)",       usd: 150, color: "#0077D4", detail: "Konsesyon 25 ane · pataj revni" },
-  { source: "Diaspora Bond",           usd: 100, color: "#00A3E0", detail: "Obligasyon 5.5% · matirite 10 ane" },
-  { source: "Donatè Entènasyonal",     usd: 100, color: "#00C8F0", detail: "USAID · AFD · Koperasyon Kanada" },
-  { source: "ONG & Philanthropes",     usd:  50, color: "#7EC8E3", detail: "Fondasyon prive & dòn espesifik" },
+  { source: "Gouvènman Ayiti",        htg: 32853, color: "#003087", detail: "Bidjè nasyonal & obligasyon souverèn" },
+  { source: "BID & Bank Mondyal",      htg: 26282, color: "#0055B3", detail: "Prè kondisyonèl 1.5% sou 30 ane" },
+  { source: "Sektè Prive (PPP)",       htg: 19712, color: "#0077D4", detail: "Konsesyon 25 ane · pataj revni" },
+  { source: "Diaspora Bond",           htg: 13141, color: "#00A3E0", detail: "Obligasyon 5.5% · matirite 10 ane" },
+  { source: "Donatè Entènasyonal",     htg: 13141, color: "#00C8F0", detail: "USAID · AFD · Koperasyon Kanada" },
+  { source: "ONG & Philanthropes",     htg:  6571, color: "#7EC8E3", detail: "Fondasyon prive & dòn espesifik" },
 ];
 
 export const PHASES = [
   {
-    faz: "Faz 1", dur: "Ane 1–2", usd: 180, color: "#003087",
+    faz: "Faz 1", dur: "Ane 1–2", htg: 23654, color: "#003087",
     subtitle: "Fondations & Swen Ijan",
     tasks: [
       "Travay tè & enfrastrikti jeneral",
@@ -295,7 +294,7 @@ export const PHASES = [
     ],
   },
   {
-    faz: "Faz 2", dur: "Ane 2–3", usd: 280, color: "#0055B3",
+    faz: "Faz 2", dur: "Ane 2–3", htg: 36795, color: "#0055B3",
     subtitle: "Espesyalite Klinik Konplè",
     tasks: [
       "Matènite NICU Nivo 3 — 120 kabann",
@@ -309,7 +308,7 @@ export const PHASES = [
     ],
   },
   {
-    faz: "Faz 3", dur: "Ane 3–4", usd: 230, color: "#0077D4",
+    faz: "Faz 3", dur: "Ane 3–4", htg: 30224, color: "#0077D4",
     subtitle: "Teknoloji Avanse & Rechèch",
     tasks: [
       "Sant Kansè — Linac + PET/CT Scanner",
@@ -323,7 +322,7 @@ export const PHASES = [
     ],
   },
   {
-    faz: "Faz 4", dur: "Ane 4–5", usd: 160, color: "#00A3E0",
+    faz: "Faz 4", dur: "Ane 4–5", htg: 21026, color: "#00A3E0",
     subtitle: "Ekspansyon Nasyonal & Ouvèti",
     tasks: [
       "Sante Mantal Konplè — 100 kabann",
@@ -414,8 +413,8 @@ export const DEPARTMENTS = [
 ];
 
 export const ROI_METRICS = [
-  { icon: "💰", value: "$120M+", unit: "/an",    label: "Revni Anyèl",       desc: "Pa ane 8, sèvis klinik & fòmasyon",    trend: "+12%/an",  trendUp: true  },
-  { icon: "✈️", value: "$50M",   unit: "/an",    label: "Touris Medikal",    desc: "Pasyan entènasyonal Karayib la",        trend: "+25%/an",  trendUp: true  },
+  { icon: "💰", value: "G 15 769M+", unit: "/an",    label: "Revni Anyèl",       desc: "Pa ane 8, sèvis klinik & fòmasyon",    trend: "+12%/an",  trendUp: true  },
+  { icon: "✈️", value: "G 6 571M",   unit: "/an",    label: "Touris Medikal",    desc: "Pasyan entènasyonal Karayib la",        trend: "+25%/an",  trendUp: true  },
   { icon: "👷", value: "8,000+", unit: "",        label: "Travay Total",      desc: "Dirèk, endirèk & kontratan",           sub: "3 500 pòs dirèk"               },
   { icon: "🏥", value: "500k+",  unit: "",        label: "Pasyan/Ane",        desc: "Ospitalize ak ambulatwa",               sub: "40% swen gratis"               },
   { icon: "📅", value: "Ane 8",  unit: "",        label: "Bidjè Balanse",     desc: "Point break-even finansye",            sub: "Modèl solid"                   },
@@ -425,16 +424,16 @@ export const ROI_METRICS = [
 ];
 
 export const PROJECTIONS = [
-  { year: "An 1",  rev:  10, exp:  45 },
-  { year: "An 2",  rev:  28, exp:  55 },
-  { year: "An 3",  rev:  52, exp:  65 },
-  { year: "An 4",  rev:  75, exp:  75 },
-  { year: "An 5",  rev:  90, exp:  82 },
-  { year: "An 6",  rev:  98, exp:  85 },
-  { year: "An 7",  rev: 108, exp:  88 },
-  { year: "An 8",  rev: 120, exp:  90 },
-  { year: "An 9",  rev: 133, exp:  92 },
-  { year: "An 10", rev: 148, exp:  95 },
+  { year: "An 1",  rev:  1314, exp:  5913 },
+  { year: "An 2",  rev:  3679, exp:  7228 },
+  { year: "An 3",  rev:  6833, exp:  8542 },
+  { year: "An 4",  rev:  9856, exp:  9856 },
+  { year: "An 5",  rev: 11827, exp: 10776 },
+  { year: "An 6",  rev: 12878, exp: 11170 },
+  { year: "An 7",  rev: 14192, exp: 11564 },
+  { year: "An 8",  rev: 15769, exp: 11827 },
+  { year: "An 9",  rev: 17477, exp: 12090 },
+  { year: "An 10", rev: 19449, exp: 12484 },
 ];
 
 export const VISION = {
@@ -454,13 +453,13 @@ export const VISION = {
     { num: "1,200",  label: "Kabann Total",    icon: "🛏️" },
     { num: "12",     label: "Espesyalite",     icon: "🏥" },
     { num: "3,500+", label: "Staff Medikal",   icon: "👨‍⚕️" },
-    { num: "$850M",  label: "Envestisman",     icon: "💎" },
+    { num: "G 111 699M",  label: "Envestisman",     icon: "💎" },
     { num: "5 Ane",  label: "Konstriksyon",    icon: "🏗️" },
     { num: "2031",   label: "Ouvèti Konplè",   icon: "🗓️" },
   ],
   strategic: [
     "Rann Ayiti yon destinasyon medikal rekonèt nan tout rejyon Karayib la, atire pasyan entènasyonal ki ap depanse nan ekonomi nasyonal la.",
-    "Diminye fwit medikal: chak ane $300M+ kite peyi a pou tretman deyò. Nou ap anpeche sa epi kenbe resous sa yo ann Ayiti.",
+    "Diminye fwit medikal: chak ane G 39 423M+ kite peyi a pou tretman deyò. Nou ap anpeche sa epi kenbe resous sa yo ann Ayiti.",
     "Fòme pwochen jenerasyon doktè, enfimyè ak teknisyen sante sou tè nasyonal — elimine bezwen ale lòt bò pou fòmasyon spesyalize.",
     "Kreye yon ekosistèm sante dirab ki ap sèvi tout kouche sosyal: sèvis gratis pou 40% pasyan endijan, sèvis premyèl pou rès la.",
     "Etabli premye sant rechèch medikal ak jenetik ann Ayiti, pou piblikasyon syantifik entènasyonal ak dyagnostik maladi ra.",

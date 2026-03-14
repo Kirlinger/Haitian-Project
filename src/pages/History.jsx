@@ -19,7 +19,7 @@ const STATS = [
   { value: "300+", label: "Mouri/100k Akouchman", sub: "Plis wo nan emisfè" },
   { value: "11M+", label: "Moun Ayiti", sub: "55% nan zòn riral" },
   { value: "40%", label: "San Aksè Sante", sub: "Manke sèvis debaz" },
-  { value: "$300M", label: "Fwit Medikal/Ane", sub: "Tretman deyò Ayiti" },
+  { value: "G 39 423M", label: "Fwit Medikal/Ane", sub: "Tretman deyò Ayiti" },
   { value: "62 Ane", label: "Esperans Lavi", sub: "Mwayèn rejyonal: 75" },
 ];
 
@@ -115,7 +115,7 @@ export default function History() {
         {[
           { icon: "🌐", title: "Sipò Entènasyonal", desc: "BID, Bank Mondyal, USAID ak patnè bilateral yo prè pou angaje nan pwojè transformasyon fondamantal." },
           { icon: "🇭🇹", title: "Volonte Politik", desc: "Yon konsansis nasyonal ap bati otou nesesite yon sentèm sante nasyonal ki fonksyonèl e dirab." },
-          { icon: "💰", title: "Dyaspora Mobilize", desc: "2M+ diaspora ayisyen ki voye $4B+/ane aletranje prè pou envesti sistematikman nan devlopman peyi a." },
+          { icon: "💰", title: "Dyaspora Mobilize", desc: "2M+ diaspora ayisyen ki voye G 526B+/ane aletranje prè pou envesti sistematikman nan devlopman peyi a." },
           { icon: "📱", title: "Teknoloji Aksesib", desc: "Telemedsèn, EHR, AI ak solisyon teknolojik rann sèvis kalite entènasyonal posib ak mwens resous." },
           { icon: "🎓", title: "Jenerasyon Nouvo", desc: "Yon jenerasyon doktè, injenyè ak administratè ayisyen fòme aletranje prè pou retounen bati Ayiti." },
           { icon: "📊", title: "Modèl PPP Pwouve", desc: "Eksperyans PPP nan lòt peyi (Ruanda, Senegal, Etiyopi) montre modèl sa ka travay nan kontèks Afrik/Karayib." },
@@ -139,7 +139,7 @@ export default function History() {
           {[
             { bf: "Lopital frajil ki kraze apre chak katastwòf", af: "Enfrastrikti resiyan konstriksyon parasismik nivo 4" },
             { bf: "Doktè kite Ayiti pou fòmasyon spesyalize", af: "Fòmasyon konplè pou tout espesyalite ann Ayiti menm" },
-            { bf: "$300M/ane kouri aletranje pou tretman", af: "Swen espesyalize aksesib nan peyi a pou tout sitwayen" },
+            { bf: "G 39 423M/ane kouri aletranje pou tretman", af: "Swen espesyalize aksesib nan peyi a pou tout sitwayen" },
             { bf: "1 doktè pou 10,000 moun (kriz grav)", af: "Vizyon: 1 doktè pou 2,500 moun avan 2040" },
           ].map((item, i) => (
             <div key={i} style={{ padding: 16, background: "rgba(0,20,60,0.4)", borderRadius: 10, border: `1px solid ${C.border}` }}>

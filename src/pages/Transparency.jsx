@@ -23,8 +23,8 @@ const KPI_SECTIONS = [
   {
     title: "Finansye", icon: "💰",
     kpis: [
-      { name: "Finansman Mobilize", target: "$850M total", current: "$450M konfime" },
-      { name: "Dyaspora Bond", target: "$100M total", current: "$25M subscri" },
+      { name: "Finansman Mobilize", target: "G 111 699M total", current: "G 59 135M konfime" },
+      { name: "Dyaspora Bond", target: "G 13 141M total", current: "G 3 285M subscri" },
       { name: "Rapò Odite", target: "4/ane", current: "An kou" },
       { name: "Transparans Fiskal", target: "100% piblik", current: "Konfòm" },
     ],
@@ -166,7 +166,7 @@ export default function Transparency() {
       <SectionTitle sub="Pwosedi akizisyon transparan ak anti-korisyon">Plan Akizisyon</SectionTitle>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
         {[
-          { icon: "📋", title: "Apèl Ofr Piblik", desc: "Tout kontra >$100K fè objè apèl ofr piblik sou sit ofisyèl HNIH ak jounal nasyonal." },
+          { icon: "📋", title: "Apèl Ofr Piblik", desc: "Tout kontra >G 13 141M fè objè apèl ofr piblik sou sit ofisyèl HNIH ak jounal nasyonal." },
           { icon: "🏆", title: "Komite Evalyasyon", desc: "Komite 5 manm endepandan evalye tout ofr selon kritè teknik, finansye ak etik." },
           { icon: "📊", title: "Piblikasyon Kontra", desc: "Tout kontra adjije piblyè sou sit HNIH ak montant, founisè ak dire kontra a." },
           { icon: "🚫", title: "Zonn Anti-Korisyon", desc: "Pwibisyon absoli pou konflè enterè. Denonsyasyon potansyèl sanksyon kriminèl." },

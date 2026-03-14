@@ -10,7 +10,7 @@ const FAQS = [
   {
     cat: "Dyaspora Bond",
     q: "Ki minimòm envestisman pou Dyaspora Bond?",
-    a: "Minimòm envestisman se $5,000 USD. Pa gen maksimòm. Ou ka achte plizyè bond nan enkrèman $1,000 anplis minimòm lan.",
+    a: "Minimòm envestisman se G 657 050. Pa gen maksimòm. Ou ka achte plizyè bond nan enkrèman G 131 410 anplis minimòm lan.",
   },
   {
     cat: "Dyaspora Bond",
@@ -70,7 +70,7 @@ const FAQS = [
   {
     cat: "Finansman",
     q: "Ki sous finansman prensipal HNIH?",
-    a: "6 sous: Gouvènman Ayiti ($250M), BID/Banque Mondiale ($200M), PPP Prive ($150M), Dyaspora Bond ($100M), Donatè Entènasyonal ($100M), ONG ($50M). Total: $850M.",
+    a: "6 sous: Gouvènman Ayiti (G 32 853M), BID/Banque Mondiale (G 26 282M), PPP Prive (G 19 712M), Dyaspora Bond (G 13 141M), Donatè Entènasyonal (G 13 141M), ONG (G 6 571M). Total: G 111 699M.",
   },
   {
     cat: "Transparans",

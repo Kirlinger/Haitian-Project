@@ -75,7 +75,7 @@ export default function ImpactResults() {
               { v: '25 000', l: 'Vies Sauvées/An' },
               { v: '500k+', l: 'Patients/An' },
               { v: '8 000+', l: 'Emplois Créés' },
-              { v: '50M$/an', l: 'Tourisme Médical' },
+              { v: 'G 6 571M/an', l: 'Tourisme Médical' },
               { v: 'Année 8', l: 'Équilibre Financier' },
             ].map((s) => (
               <div key={s.l} className="stat-pill" style={{
@@ -118,11 +118,11 @@ export default function ImpactResults() {
             <div style={{ display: 'flex', gap: 20, marginTop: 12, flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                 <div style={{ width: 12, height: 12, background: C.accent, borderRadius: 2 }} />
-                <span style={{ color: C.soft, fontSize: 12 }}>Revenus Annuels ($M)</span>
+                <span style={{ color: C.soft, fontSize: 12 }}>Revenus Annuels (G M)</span>
               </div>
               <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                 <div style={{ width: 12, height: 12, background: 'rgba(255,70,70,0.6)', borderRadius: 2 }} />
-                <span style={{ color: C.soft, fontSize: 12 }}>Charges Opérationnelles ($M)</span>
+                <span style={{ color: C.soft, fontSize: 12 }}>Charges Opérationnelles (G M)</span>
               </div>
               <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                 <div style={{ width: 12, height: 2, background: C.success }} />
@@ -135,7 +135,7 @@ export default function ImpactResults() {
             {PROJECTIONS.filter((_, i) => i % 2 === 0).map((p) => (
               <Card key={p.year} style={{ textAlign: 'center', padding: 16 }}>
                 <div style={{ color: C.soft, fontSize: 11, marginBottom: 6 }}>{p.year}</div>
-                <div style={{ color: C.light, fontWeight: 700, fontSize: 16 }}>${p.rev}M</div>
+                <div style={{ color: C.light, fontWeight: 700, fontSize: 16 }}>G {p.rev}M</div>
                 <div style={{ color: C.soft, fontSize: 11, marginTop: 4 }}>Revenus</div>
               </Card>
             ))}

@@ -7,7 +7,7 @@ const QUICK_LINKS = [
   { icon: "🏥", title: "À Propos du Projet", desc: "Mission, vision et présentation du HNIH", path: "/about", color: C.blue },
   { icon: "🚨", title: "Crise Sanitaire en Haïti", desc: "Statistiques, contexte et causes profondes", path: "/health-crisis", color: "#E74C3C" },
   { icon: "💡", title: "Solutions & Innovations", desc: "Comment le HNIH répond à la crise", path: "/solutions", color: "#27AE60" },
-  { icon: "💼", title: "Budget & Financement 850M$", desc: "6 sources de financement, plan détaillé", path: "/budget", color: "#003087" },
+  { icon: "💼", title: "Budget & Financement G 111 699M", desc: "6 sources de financement, plan détaillé", path: "/budget", color: "#003087" },
   { icon: "📈", title: "Impact & Résultats", desc: "ROI, projections & impact sur la population", path: "/impact", color: C.success },
   { icon: "🗓️", title: "Plan de Mise en Œuvre", desc: "Programme de construction en 4 phases, 5 ans", path: "/plan", color: C.steel },
   { icon: "🏗️", title: "12 Depatman", desc: "Toutes les spécialités médicales en détail", path: "/depatman", color: "#8E44AD" },
@@ -91,7 +91,7 @@ export default function Home() {
 
             <p style={{ fontSize: 18, color: "#C8E0FF", lineHeight: 1.7, margin: "0 0 12px", maxWidth: 650 }}>
               Premier centre médical national de classe mondiale en Haïti. Pôle de référence sanitaire des Caraïbes
-              d’ici 2031 — 1 200 lits, 12 spécialités, investissement de 850M$.
+              d’ici 2031 — 1 200 lits, 12 spécialités, investissement de G 111 699M.
             </p>
             <p style={{ fontSize: 15, color: C.soft, lineHeight: 1.7, margin: "0 0 32px", maxWidth: 640 }}>
               Bâti pou sèvi tout pèp ayisyen — pou mete fen nan kriz sante, fòme pwochen jenerasyon doktè
@@ -136,7 +136,7 @@ export default function Home() {
             {/* Key stats */}
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               {[
-                { v: "850M$", l: "Bidjè Total" },
+                { v: "G 111 699M", l: "Bidjè Total" },
                 { v: "1 200", l: "Kabann" },
                 { v: "12", l: "Espesyalite" },
                 { v: "3 500+", l: "Pèsonèl" },

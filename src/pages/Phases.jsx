@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { C, PHASES, fmtUSD, fmtHTG } from '../data/constants';
+import { C, PHASES, fmtHTG } from '../data/constants';
 import { SectionTitle, StatPill, Card, Badge } from '../components/UI';
 
 export default function Phases() {
   const [activePhase, setActivePhase] = useState(0);
   const phase = PHASES[activePhase];
-  const total = PHASES.reduce((s, p) => s + p.usd, 0);
+  const total = PHASES.reduce((s, p) => s + p.htg, 0);
 
   return (
     <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px", color: "#fff", fontFamily: "'Segoe UI', sans-serif" }}>
@@ -23,7 +23,7 @@ export default function Phases() {
         {[
           { v: "5 Ane", l: "Dire Total" },
           { v: "4", l: "Faz" },
-          { v: fmtUSD(total), l: "Bidjè Total" },
+          { v: fmtHTG(total), l: "Bidjè Total" },
           { v: "32", l: "Travay Kle" },
           { v: "2031", l: "Ouvèti" },
         ].map((s) => <StatPill key={s.l} value={s.v} label={s.l} />)}
@@ -66,8 +66,7 @@ export default function Phases() {
           <div>
             <div style={{ color: phase.color, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>{phase.dur}</div>
             <h2 style={{ color: "#fff", fontWeight: 900, fontSize: 24, margin: "0 0 8px" }}>{phase.faz}: {phase.subtitle}</h2>
-            <Badge color={C.accent}>{fmtUSD(phase.usd)}</Badge>
-            <Badge color={C.soft} style={{ marginLeft: 8 }}>{fmtHTG(phase.usd)}</Badge>
+            <Badge color={C.accent}>{fmtHTG(phase.htg)}</Badge>
           </div>
           <div style={{
             background: `${phase.color}20`,
@@ -76,10 +75,10 @@ export default function Phases() {
             padding: "12px 20px",
             textAlign: "center",
           }}>
-            <div style={{ fontSize: 28, fontWeight: 900, color: "#fff" }}>{fmtUSD(phase.usd)}</div>
+            <div style={{ fontSize: 28, fontWeight: 900, color: "#fff" }}>{fmtHTG(phase.htg)}</div>
             <div style={{ fontSize: 12, color: C.soft }}>Bidjè Faz</div>
             <div style={{ fontSize: 11, color: phase.color, marginTop: 4 }}>
-              {((phase.usd / total) * 100).toFixed(0)}% bidjè total
+              {((phase.htg / total) * 100).toFixed(0)}% bidjè total
             </div>
           </div>
         </div>
@@ -121,11 +120,11 @@ export default function Phases() {
             <div style={{ color: "#fff", fontWeight: 800, fontSize: 18, marginBottom: 4 }}>{p.faz}</div>
             <div style={{ color: C.light, fontSize: 13, marginBottom: 12 }}>{p.subtitle}</div>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ color: "#fff", fontWeight: 800, fontSize: 16 }}>{fmtUSD(p.usd)}</span>
+              <span style={{ color: "#fff", fontWeight: 800, fontSize: 16 }}>{fmtHTG(p.htg)}</span>
               <span style={{ color: C.soft, fontSize: 11 }}>{p.tasks.length} travay</span>
             </div>
             <div style={{ marginTop: 10, height: 6, background: "rgba(0,40,100,0.4)", borderRadius: 3, overflow: "hidden" }}>
-              <div style={{ height: "100%", width: `${(p.usd / total) * 100}%`, background: p.color, borderRadius: 3 }} />
+              <div style={{ height: "100%", width: `${(p.htg / total) * 100}%`, background: p.color, borderRadius: 3 }} />
             </div>
           </Card>
         ))}

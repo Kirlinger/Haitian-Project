@@ -119,9 +119,9 @@ export default function ROI() {
         {[
           { icon: "🏥", title: "Accès Sante Nasyonal", desc: "500,000+ pasyan/ane ak 40% sèvis gratis pou pèp pòv — pwoteksyon sosyal reyèl" },
           { icon: "💼", title: "8,000+ Travay Dirèk", desc: "3,500 pòs medikal dirèk + 4,500 endirèk nan konstriksyon, sèvis ak logistik" },
-          { icon: "✈️", title: "Touris Medikal", desc: "$50M+/ane nan touris medikal Karayib — Ayiti vin destinasyon sante rekonèt" },
+          { icon: "✈️", title: "Touris Medikal", desc: "G 6 571M+/ane nan touris medikal Karayib — Ayiti vin destinasyon sante rekonèt" },
           { icon: "🎓", title: "Sèvo Ret Ann Ayiti", desc: "500 spesyalis fòme/ane diminye ekzòd sèvo medikal ki fè peyi a pèdi" },
-          { icon: "💊", title: "Ekonomize $300M", desc: "Anpeche $300M+/ane kouri aletranje pou tretman medikal deyò peyi a" },
+          { icon: "💊", title: "Ekonomize G 39 423M", desc: "Anpeche G 39 423M+/ane kouri aletranje pou tretman medikal deyò peyi a" },
           { icon: "🔬", title: "Rechèch Nasyonal", desc: "50+ piblikasyon syantifik ayisyen/ane établi réputation rechèch Ayiti" },
         ].map((s) => (
           <Card key={s.title} className="card-hover" style={{ display: "flex", gap: 14 }}>

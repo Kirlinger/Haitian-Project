@@ -4,9 +4,9 @@ import { SectionTitle, Card, Badge } from '../components/UI';
 const PARTNERS_INTL = [
   { name: "Organisation Mondiale de la Santé", short: "OMS/WHO", icon: "🌍", contrib: "Estanda medikal, ekipman, konsiltasyon teknik", color: "#3498DB" },
   { name: "Pan American Health Organization", short: "PAHO/OPS", icon: "🌎", contrib: "Koordinasyon rejyonal, pwogram vaksen, fòmasyon", color: "#2980B9" },
-  { name: "Banque Mondiale (World Bank)", short: "World Bank", icon: "🏦", contrib: "Finansman $200M prè kondisyonèl, asistans teknik", color: "#F39C12" },
+  { name: "Banque Mondiale (World Bank)", short: "World Bank", icon: "🏦", contrib: "Finansman G 26 282M prè kondisyonèl, asistans teknik", color: "#F39C12" },
   { name: "Banque Interaméricaine de Développement", short: "BID/IDB", icon: "🌐", contrib: "Co-finansman, jèsyon pwojè, renfosman kapasite", color: "#E67E22" },
-  { name: "USAID — Agence des États-Unis", short: "USAID", icon: "🇺🇸", contrib: "Dòn $50M, pwogram sante piblik, fòmasyon pèsonèl", color: "#C0392B" },
+  { name: "USAID — Agence des États-Unis", short: "USAID", icon: "🇺🇸", contrib: "Dòn G 6 571M, pwogram sante piblik, fòmasyon pèsonèl", color: "#C0392B" },
   { name: "AFD — Agence Française de Développement", short: "AFD France", icon: "🇫🇷", contrib: "Finansman teknik, ekspertiz medikal, kooperasyon", color: "#8E44AD" },
   { name: "Coopération Canadienne", short: "Canada", icon: "🇨🇦", contrib: "Bous etid, fòmasyon pèsonèl, asistans teknik", color: "#E74C3C" },
   { name: "Union Européenne (EU)", short: "EU", icon: "🇪🇺", contrib: "Subvansyon enpak sosyal, nòm teknik, gouvènans", color: "#3498DB" },
@@ -58,7 +58,7 @@ export default function Partnerships() {
           { v: "6", l: "Patnè Prive" },
           { v: "6", l: "Univ. Akademik" },
           { v: "6", l: "ONG Patnè" },
-          { v: "$850M", l: "Finansman Mobilize" },
+          { v: "G 111 699M", l: "Finansman Mobilize" },
           { v: "25 Ane", l: "Konsesyon PPP" },
         ].map((s) => (
           <div key={s.l} className="stat-pill" style={{

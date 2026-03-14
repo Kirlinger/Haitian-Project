@@ -17,11 +17,11 @@ const RESIDENCIES = [
 ];
 
 const SCHOLARSHIPS = [
-  { name: "Bous Egzèlans HNIH", amount: "$25,000/ane", num: "20/ane", desc: "Rezidans konplè pou pi bon etidyan ayisyen medisin. Kouvri frè akademik + lojman + sibvansyon." },
-  { name: "Bous Dyaspora", amount: "$15,000/ane", num: "10/ane", desc: "Pou manm dyaspora ayisyen ki vle fòme kòm spesyalis epi retounen travay ann Ayiti minimum 5 ane." },
-  { name: "Bous Enfimyè Nasyonal", amount: "$8,000/ane", num: "50/ane", desc: "Pou enfimyè ki ap fòme ann Ayiti. Egzije travay nan sistem sante piblik pandan 3 ane apre gradyasyon." },
-  { name: "Bous Rechèch Doktora", amount: "$20,000/ane", num: "5/ane", desc: "Pou rechèch doktoral sou maladi tropikal, jenetik ayisyen, sante piblik ann Ayiti." },
-  { name: "Bous Teknisyen Medikal", amount: "$6,000/ane", num: "30/ane", desc: "Radyoloji, laboratwa, famasi, imajri medikal — teknik ki manke nan sistèm sante ayisyen an." },
+  { name: "Bous Egzèlans HNIH", amount: "G 3 285 250/ane", num: "20/ane", desc: "Rezidans konplè pou pi bon etidyan ayisyen medisin. Kouvri frè akademik + lojman + sibvansyon." },
+  { name: "Bous Dyaspora", amount: "G 1 971 150/ane", num: "10/ane", desc: "Pou manm dyaspora ayisyen ki vle fòme kòm spesyalis epi retounen travay ann Ayiti minimum 5 ane." },
+  { name: "Bous Enfimyè Nasyonal", amount: "G 1 051 280/ane", num: "50/ane", desc: "Pou enfimyè ki ap fòme ann Ayiti. Egzije travay nan sistem sante piblik pandan 3 ane apre gradyasyon." },
+  { name: "Bous Rechèch Doktora", amount: "G 2 628 200/ane", num: "5/ane", desc: "Pou rechèch doktoral sou maladi tropikal, jenetik ayisyen, sante piblik ann Ayiti." },
+  { name: "Bous Teknisyen Medikal", amount: "G 788 460/ane", num: "30/ane", desc: "Radyoloji, laboratwa, famasi, imajri medikal — teknik ki manke nan sistèm sante ayisyen an." },
 ];
 
 const ACCREDITATIONS = [
